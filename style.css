@@ -1,58 +1,76 @@
+/* General Reset */
 body {
-    font-family: Arial, sans-serif;
     margin: 0;
-    padding: 0;
-    background-color: #f4f4f4;
-    color: #333;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  header {
+    background: #333;
+    color: #fff;
     text-align: center;
-}
-
-header {
-    background-color: #4caf50;
-    color: white;
-    padding: 20px;
-}
-
-header .profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    border: 3px solid white;
-    margin-bottom: 10px;
-}
-
-main {
-    padding: 20px;
-}
-
-a {
-    color: #4caf50;
+    padding: 1.5rem 0;
+  }
+  
+  header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  nav a {
+    margin: 0 1rem;
+    color: #fff;
     text-decoration: none;
-}
-
-a:hover {
+  }
+  
+  nav a:hover {
     text-decoration: underline;
-}
-
-footer {
-    background-color: #333;
-    color: white;
-    padding: 10px;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-button {
-    padding: 10px 20px;
-    background-color: #4caf50;
-    color: white;
-    border: none;
-    cursor: pointer;
-    border-radius: 5px;
-    font-size: 16px;
-}
-
-button:hover {
-    background-color: #45a049;
-}
+  }
+  
+  main {
+    padding: 1rem;
+  }
+  
+  section {
+    margin: 2rem 0;
+  }
+  
+  section h2 {
+    color: #333;
+    font-size: 2rem;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    margin-bottom: 1rem;
+  }
+  
+  .project {
+    margin: 1rem 0;
+  }
+  
+  .project h3 {
+    margin: 0.5rem 0;
+    color: #333;
+  }
+  
+  .project a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  
+  .project a:hover {
+    text-decoration: underline;
+  }
+  
+  footer {
+    background: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 2rem;
+  }
+  
