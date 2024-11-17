@@ -3,21 +3,28 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Souptik Samanta</title>
+  <meta name="description" content="Portfolio of Souptik Samanta - Hobbyist, Coder, and Maker. Discover projects, skills, and ways to connect.">
+  <meta name="keywords" content="Souptik Samanta, Portfolio, Projects, Maker, Developer, Coding">
+  <meta name="author" content="Souptik Samanta">
+  <title>Souptik Samanta | Portfolio</title>
   <link rel="stylesheet" href="style.css">
+  <script src="./security.js"></script>
 </head>
 <body>
-  <div class="image-container">
-    <div class="overlay">
-      <img src="img.png" alt="Profile Picture" class="profile-pic">
-      <p class="subtitle"></p>
-      
+  <div class="overlay">
+    <img src="./img.png" alt="Profile Picture" class="profile-pic">
+    <div class="name">Souptik Samanta</div>
+    <div class="subtitle">
+      <span id="greeting"></span>
+      <span> Hobbyist | Coder | Maker</span>
     </div>
+    <div id="time-display" class="time"></div> 
+  </div>
+  
     <img src="mountain.jpg" alt="Mountain" class="mountain-image">
   </div>
   <div id="app" class="container">
     <header class="hero">
-      <h1 class="name">Souptik Samanta</h1>
       <div class="buttons">
         <button onclick="scrollToSection('about')">About Me</button>
         <button onclick="scrollToSection('projects')">Projects</button>
@@ -75,7 +82,7 @@
     </main>
   </div>
   <p style="text-align: center;"><a class="copyright" href="https://github.com/souptik-samanta">© 2024 Souptik Samanta</a></p>
-  <script src="script.js"></script>
+  
   
 </body>
 </html>

@@ -5,27 +5,24 @@ function scrollToSection(sectionId) {
   }
 }
 
-const now = new Date();
-const hour = now.getHours();
-const overlaySubtitle = document.querySelector('.subtitle');
+function updateTimeAndGreeting() {
+  const timeElement = document.getElementById("time-display");
+  const greetingElement = document.getElementById("greeting");
 
-if (hour < 12) {
-  overlaySubtitle.textContent = "Good Morning! Hobbyist | Coder | Maker";
-} else if (hour < 18) {
-  overlaySubtitle.textContent = "Good Afternoon! Hobbyist | Coder | Maker";
-} else {
-  overlaySubtitle.textContent = "Good Evening! Hobbyist | Coder | Maker";
+  const now = new Date();
+  const hours = now.getHours();
+  const minutes = String(now.getMinutes()).padStart(2, "0");
+
+  timeElement.textContent = `Time: ${hours}:${minutes}`;
+
+  if (hours < 12) {
+    greetingElement.textContent = "Good Morning";
+  } else if (hours < 18) {
+    greetingElement.textContent = "Good Afternoon";
+  } else {
+    greetingElement.textContent = "Good Evening";
+  }
 }
 
-
-const mountainImage = document.querySelector('.mountain-image');
-
-window.addEventListener('scroll', () => {
-  const scrollY = window.scrollY;
-  const maxBlur = 10; 
-  const maxOpacity = 1; 
-  const blurValue = Math.min(scrollY / 50, maxBlur); 
-  const opacityValue = Math.min(scrollY / 300, maxOpacity); 
-
-  mountainImage.style.filter = `blur(${blurValue}px)`;
-});
+setInterval(updateTimeAndGreeting, 1000);
+updateTimeAndGreeting();
