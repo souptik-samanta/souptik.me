@@ -7,48 +7,64 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="container">
+  <div class="image-container">
+    <div class="overlay">
+      <img src="img.png" alt="Profile Picture" class="profile-pic">
+      <p class="subtitle"></p>
+      
+    </div>
+    <img src="mountain.jpg" alt="Mountain" class="mountain-image">
+  </div>
+  <div id="app" class="container">
     <header class="hero">
       <h1 class="name">Souptik Samanta</h1>
-      <p class="subtitle">Maker | Student | Coder | Maker</p>
+      <div class="buttons">
+        <button onclick="scrollToSection('about')">About Me</button>
+        <button onclick="scrollToSection('projects')">Projects</button>
+        <button onclick="scrollToSection('contact')">Contact</button>
+      </div>
     </header>
-
     <main>
       <section id="about" class="section">
         <h2>About Me</h2>
         <p>
-          I'm Souptik, a passionate student pursuing engineering. I love building innovative projects and solving problems using technology.
+          I am a passionate maker who loves technologies and is ready to collaborate with anyone as a team member. I am a self-taught programmer and always try to learn new things and explore technologies.
+          </br>
+          I am currently in Class 10th (ICSE).
+          </br>
+          I am in Agrasian Boys School.
+          </br>
+          From India, West Bengal, Kolkata.
+          </br>
+          Made this website to showcase my projects and skills.
         </p>
       </section>
-
       <section id="projects" class="section">
         <h2>Projects</h2>
         <div class="project-card">
           <h3>Personal Website</h3>
-          <p>A sleek portfolio showcasing my skills and work.</p>
-          <a href="https://github.com/souptik-samanta" target="_blank">View on GitHub</a>
+          <p>Designed and developed a responsive portfolio website using modern web technologies.</p>
+          <a href="https://github.com/souptik-samanta/souptik.me" style="color:beige" target="_blank">GitHub</a>
         </div>
         <div class="project-card">
           <h3>3D Printer</h3>
-          <p>Building a custom 3D printer from scratch, leveraging hardware and software skills.</p>
+          <p>Building a custom 3D printer from scratch to explore CAD and engineering principles.</p>
+          <a href="https://github.com/souptik-samanta/3D_printer" style="color:beige" target="_blank">GitHub</a>
         </div>
       </section>
-
-      <section id="contact" class="section">
+      <section id="contact" class="links">
         <h2>Contact</h2>
         <ul>
-          <li>Email: <a href="mailto:souptiksamanta20141188@gmail.com">souptiksamanta20141188@gmail.com</a></li>
-          <li>GitHub: <a href="https://github.com/souptik-samanta" target="_blank">souptik-samanta</a></li>
-          <li>LinkedIn: <a href="https://www.linkedin.com/in/me-souptik/" target="_blank">me-souptik</a></li>
-          <li>Instagram: <a href="https://www.instagram.com/souptik.me" target="_blank">@souptik.me</a></li>
-          <li>X: <a href="https://x.com/souptik_me" target="_blank">@souptik_me</a></li>
+          <li class="Links">Email: <a href="mailto:souptik@souptik.me" style="color:beige">souptik@souptik.me</a></li>
+          <li class="Links">GitHub: <a href="https://github.com/souptik-samanta" style="color:beige" target="_blank">souptik-samanta</a></li>
+          <li class="Links">LinkedIn: <a href="https://www.linkedin.com/in/me-souptik/" style="color:beige" target="_blank">me-souptik</a></li>
+          <li class="Links">Instagram: <a href="https://www.instagram.com/souptik.me" style="color:beige" target="_blank">@souptik.me</a></li>
         </ul>
       </section>
     </main>
   </div>
-
-  
-    <p>© 2024 Souptik Samanta</p>
-  
+  <p style="text-align: center;"><a class="copyright" href="https://github.com/souptik-samanta">© 2024 Souptik Samanta</a></p>
+  <script src="script.js"></script>
+  <script>src="./security.js"</script>
 </body>
 </html>
