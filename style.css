@@ -129,6 +129,11 @@ body {
   padding: 25px;
   background: transparent;
   color: #e7a71d;
+  background: rgba(54, 50, 89, 0.8); 
+  margin: 15px 0;
+  padding: 25px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
 }
 
 .Links a {
