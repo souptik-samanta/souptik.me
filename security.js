@@ -1,4 +1,4 @@
-var message = "**Ayo Bro what you trying to do !! **";
+"/*var message = "**Ayo Bro what you trying to do !! **";
 document.addEventListener('keydown', function (e) {
     if (e.key === "F12") {
       e.preventDefault();  
@@ -85,3 +85,4 @@ function disableCtrlKeyCombination(e) {
 }
 
 document.onkeydown = disableCtrlKeyCombination;
+*/"
