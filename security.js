@@ -62,7 +62,7 @@ document.onmouseup = mousehandler;
 
 function disableCtrlKeyCombination(e) {
     var forbiddenKeys = ["a", "s", "c", "x", "u"];
-    var key;
+  "  var key;
     var isCtrl;
     
     if (window.event) {
