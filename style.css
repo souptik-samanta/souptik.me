@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Press+Start+2P&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&family=VT323&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 body {
   margin: 0;
-  font-family: 'Poppins', sans-serif;
+  font-family: 'Orbitron',monospace;
   background: #0b0d26; /* Deep midnight blue */
   color: #ffffff; /* Snowy white text */
   overflow-x: hidden;
@@ -86,7 +88,7 @@ p {
   height: 100%;
   background: linear-gradient(to bottom, rgba(11, 13, 38, 0.7), rgba(21, 23, 56, 0.8));
   z-index: 2;
-  filter: blur(8px);
+  filter: blur(20px);
 }
 
 .overlay {
@@ -102,12 +104,12 @@ p {
   width: 150px;
   height: 150px;
   border-radius: 50%;
-  border: 3px solid #ffba74; 
+  border: 3px solid #969696; 
   margin-bottom: 15px; 
 }
 
 .name {
-  color: #f0cb51; 
+  color: #cdfbe9; 
   font-size: 3rem;
   font-weight: 600;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
@@ -119,6 +121,7 @@ p {
   margin-top: 10px;
   color: #ffd700;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
 
 .time {
@@ -145,7 +148,12 @@ p {
   margin: 10px;
   padding: 12px 25px;
   font-size: 1.1rem;
-  background: #1e88e5; /* Cool blue */
+  background: rgba( 255, 255, 255, 0.25 );
+  box-shadow: 0 10px 32px 0 rgba(51, 60, 181, 0.37);
+  backdrop-filter: blur( 4px );
+  -webkit-backdrop-filter: blur( 4px );
+  border-radius: 10px;
+  border: 1px solid rgba( 255, 255, 255, 0.18 );    
   color: #ffffff; /* White text */
   border: none;
   border-radius: 30px;
@@ -160,6 +168,7 @@ p {
 }
 
 .section {
+  font-family: "Space Mono", monospace;
   margin: 50px 0;
   padding: 30px;
   background: rgba(34, 30, 63, 0.7);
