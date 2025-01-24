@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Form</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="bg-gray-900 text-white font-sans">
+  <div class="min-h-screen flex items-center justify-center">
+    <form id="contact-form" class="bg-gray-800 p-8 rounded-lg shadow-lg w-full max-w-md">
+      <h2 class="text-2xl font-bold mb-6 text-center bg-gradient-to-r from-cyan-400 to-purple-500 bg-clip-text text-transparent">
+        Contact Me
+      </h2>
+      <div class="mb-4">
+        <label for="name" class="block text-sm font-medium mb-2">Name</label>
+        <input type="text" id="name" name="name" required
+          class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400">
+      </div>
+      <div class="mb-4">
+        <label for="email" class="block text-sm font-medium mb-2">Email</label>
+        <input type="email" id="email" name="email" required
+          class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400">
+      </div>
+      <div class="mb-6">
+        <label for="message" class="block text-sm font-medium mb-2">Message</label>
+        <textarea id="message" name="message" rows="4" required
+          class="w-full px-4 py-2 bg-gray-700 border border-gray-600 rounded-lg focus:outline-none focus:border-cyan-400"></textarea>
+      </div>
+      <button type="submit" id="submit-button"
+        class="w-full bg-gradient-to-r from-cyan-400 to-purple-500 text-white py-2 rounded-lg hover:from-cyan-500 hover:to-purple-600 transition-all flex items-center justify-center">
+        <span id="submit-text">Send Message</span>
+        <div id="loading-spinner" class="loading-spinner hidden ml-2"></div>
+      </button>
+      <div id="success-message" class="hidden mt-4 text-center text-green-400">
+        Message sent successfully!
+      </div>
+      <div id="error-message" class="hidden mt-4 text-center text-red-400">
+        Failed to send message. Please try again.
+      </div>
+    </form>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
