@@ -113,14 +113,91 @@
         </p>
       </section>
       
-      <!-- Dynamic Projects Section -->
-      <section id="projects" class="section">
-        <h2>Projects</h2>
-        <div id="projects-container">
-          <p>Loading projects...</p>
-        </div>
-      </section>
-      
+<!-- Dynamic Projects Section -->
+<section id="projects" class="section">
+  <h2>Projects</h2>
+  <div id="projects-container">
+    <p>Loading projects...</p>
+  </div>
+</section>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    // Fetch the projects data from data.json
+    fetch("data.json")
+      .then(response => {
+        if (!response.ok) {
+          throw new Error("Network response was not ok " + response.statusText);
+        }
+        return response.json();
+      })
+      .then(projects => {
+        const container = document.getElementById("projects-container");
+        container.innerHTML = ""; // Clear the "Loading projects..." message
+
+        projects.forEach(project => {
+          // Create a card for each project
+          const projectCard = document.createElement("div");
+          projectCard.classList.add("project-card");
+
+          // Display the project number (position)
+          const projectNumber = document.createElement("p");
+          projectNumber.classList.add("project-number");
+          projectNumber.textContent = "Project #" + project.projectNumber;
+          projectCard.appendChild(projectNumber);
+
+          // Display the project image, if provided
+          if (project.img) {
+            const img = document.createElement("img");
+            img.src = project.img;
+            img.alt = project.title;
+            img.style.width = "200px";  // Adjust styling as needed
+            projectCard.appendChild(img);
+          }
+
+          // Display the project title
+          const title = document.createElement("h3");
+          title.textContent = project.title;
+          projectCard.appendChild(title);
+
+          // Create a container for the buttons
+          const buttonsDiv = document.createElement("div");
+          buttonsDiv.classList.add("project-buttons");
+
+          // Create the Repo button if a repo link is provided
+          if (project.repo) {
+            const repoButton = document.createElement("button");
+            repoButton.textContent = "Repo";
+            repoButton.addEventListener("click", function() {
+              window.open(project.repo, "_blank");
+            });
+            buttonsDiv.appendChild(repoButton);
+          }
+
+          // If you plan to add a demo link, check for a 'demo' property:
+          if (project.demo) {
+            const demoButton = document.createElement("button");
+            demoButton.textContent = "Demo";
+            demoButton.addEventListener("click", function() {
+              window.open(project.demo, "_blank");
+            });
+            buttonsDiv.appendChild(demoButton);
+          }
+
+          // Append the buttons container to the project card
+          projectCard.appendChild(buttonsDiv);
+
+          // Append the project card to the projects container
+          container.appendChild(projectCard);
+        });
+      })
+      .catch(error => {
+        console.error("Error fetching projects:", error);
+        document.getElementById("projects-container").innerHTML =
+          "<p>Error loading projects.</p>";
+      });
+  });
+</script>
+
       <!-- Skills Section -->
       <section id="skills" class="section">
         <h2>Skills</h2>
