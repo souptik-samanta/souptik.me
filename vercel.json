@@ -1,0 +1,7 @@
+{
+    "rewrites": [
+      { "source": "/now-playing", "destination": "/api/now-playing" },
+      { "source": "/projects", "destination": "/api/projects" }
+    ]
+  }
+  
