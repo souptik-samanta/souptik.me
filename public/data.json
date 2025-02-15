@@ -1,0 +1,15 @@
+[
+    {
+      "projectNumber": 1,
+      "title": "Personal Portfolio",
+      "repo": "https://github.com/example/repo",
+      "img": "https://example.com/image.jpg"
+    },
+    {
+        "projectNumber": 2,
+        "title": "Weather App",
+        "repo": "https://example.com/image.jpg",
+        "img": "https://example.com/image.jpg"
+    }
+  ]
+  
