@@ -4,16 +4,19 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const app = express();
-const port = process.env.PORT || 3000;
+
 // Last.fm configuration from environment variables.
-const LASTFM_USERNAME ='Souptik-Samanta' ;
-const LASTFM_API_KEY ='3448e1e3fb98b8cf6279ff1a310b7c53' ;
+const LASTFM_USERNAME = 'Souptik-Samanta';
+const LASTFM_API_KEY = '3448e1e3fb98b8cf6279ff1a310b7c53';
 // Dummy duration for now playing tracks (in seconds)
 const DUMMY_DURATION = process.env.DUMMY_DURATION || 180;
+
 // Global variable to store the currently playing track info.
 let nowPlayingTrack = null;
+
 // Serve static files from the "public" folder.
-app.use(express.static('public'));
+app.use(express.static(path.join(__dirname, 'public')));
+
 /**
  * Endpoint: /now-playing
  * Fetches recent track info from Last.fm and calculates elapsed time server-side.
@@ -22,7 +25,7 @@ app.get('/now-playing', async (req, res) => {
   try {
     // Use global fetch (available in Node v18+)
     const response = await fetch(
-      `https://ws.audioscrobbler.com/2.0/?method=user.getrecenttracks&user=${LASTFM_USERNAME}&api_key=${LASTFM_API_KEY}&format=json&limit=1`
+      `https://ws.audioscrobbler.com/2.0/?method=user.getRecentTracks&user=${LASTFM_USERNAME}&api_key=${LASTFM_API_KEY}&format=json&limit=1`
     );
     const data = await response.json();
     if (data.recenttracks && data.recenttracks.track) {
@@ -78,6 +81,7 @@ app.get('/now-playing', async (req, res) => {
     res.status(500).json({ error: "Error fetching now playing data" });
   }
 });
+
 /**
  * Endpoint: /projects
  * Reads the project data from data.json and returns it as JSON.
@@ -98,7 +102,14 @@ app.get('/projects', (req, res) => {
     }
   });
 });
-// (Optional) You can add additional endpoints like /add here.
-app.listen(port, () => {
-  console.log(`Server running on port ${port}`);
-});
+
+// Only start the server when running locally.
+// On Vercel, the function is invoked per request.
+if (process.env.VERCEL === undefined) {
+  const port = process.env.PORT || 3000;
+  app.listen(port, () => {
+    console.log(`Server running on port ${port}`);
+  });
+}
+
+module.exports = app;
