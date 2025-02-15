@@ -124,13 +124,24 @@
   document.addEventListener("DOMContentLoaded", function() {
     // Fetch the projects data from data.json
     fetch("data.json")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok " + response.statusText);
-        }
-        return response.json();
-      })
-      .then(projects => {
+        .then(response => {
+          if (!response.ok) {
+            throw new Error("Network response was not ok " + response.statusText);
+          }
+          return response.json();
+        })
+        .then(projects => displayProjects(projects))
+        .catch(error => {
+          console.error("Error fetching projects:", error);
+          document.getElementById("projects-container").innerHTML =
+            "<p>Error loading projects.</p>";
+        });
+      
+      
+      // For demo purposes, using the sample data
+      displayProjects(projectsData);
+      
+      function displayProjects(projects) {
         const container = document.getElementById("projects-container");
         container.innerHTML = ""; // Clear the "Loading projects..." message
 
@@ -139,64 +150,96 @@
           const projectCard = document.createElement("div");
           projectCard.classList.add("project-card");
 
-          // Display the project number (position)
+          // Display the project number
           const projectNumber = document.createElement("p");
           projectNumber.classList.add("project-number");
-          projectNumber.textContent = "Project #" + project.projectNumber;
+          projectNumber.textContent = "#" + project.projectNumber;
           projectCard.appendChild(projectNumber);
 
-          // Display the project image, if provided
+          // Card header with title
+          const cardHeader = document.createElement("div");
+          cardHeader.classList.add("card-header");
+          
+          const title = document.createElement("h3");
+          title.textContent = project.title;
+          cardHeader.appendChild(title);
+          
+          projectCard.appendChild(cardHeader);
+
+          // Card content container
+          const cardContent = document.createElement("div");
+          cardContent.classList.add("card-content");
+          
+          // Image container
+          const cardImage = document.createElement("div");
+          cardImage.classList.add("card-image");
+          
           if (project.img) {
             const img = document.createElement("img");
             img.src = project.img;
             img.alt = project.title;
-            img.style.width = "200px";  // Adjust styling as needed
-            projectCard.appendChild(img);
+            cardImage.appendChild(img);
           }
-
-          // Display the project title
-          const title = document.createElement("h3");
-          title.textContent = project.title;
-          projectCard.appendChild(title);
-
-          // Create a container for the buttons
+          
+          cardContent.appendChild(cardImage);
+          
+          // Card details (description and buttons)
+          const cardDetails = document.createElement("div");
+          cardDetails.classList.add("card-details");
+          
+          // Add description if available
+          if (project.description) {
+            const description = document.createElement("p");
+            description.classList.add("project-description");
+            description.textContent = project.description;
+            cardDetails.appendChild(description);
+          }
+          
+          // Buttons container
           const buttonsDiv = document.createElement("div");
           buttonsDiv.classList.add("project-buttons");
 
-          // Create the Repo button if a repo link is provided
+          // Repo button with GitHub logo
           if (project.repo) {
             const repoButton = document.createElement("button");
-            repoButton.textContent = "Repo";
+            repoButton.classList.add("btn", "btn-repo");
+            repoButton.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 16 16" fill="currentColor">
+                <path fill-rule="evenodd" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+              </svg>
+              Repo
+            `;
             repoButton.addEventListener("click", function() {
               window.open(project.repo, "_blank");
             });
             buttonsDiv.appendChild(repoButton);
           }
 
-          // If you plan to add a demo link, check for a 'demo' property:
+          // Demo button
           if (project.demo) {
             const demoButton = document.createElement("button");
-            demoButton.textContent = "Demo";
+            demoButton.classList.add("btn", "btn-demo");
+            demoButton.innerHTML = `
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="6 9 12 15 18 9"></polyline>
+              </svg>
+              Demo
+            `;
             demoButton.addEventListener("click", function() {
               window.open(project.demo, "_blank");
             });
             buttonsDiv.appendChild(demoButton);
           }
 
-          // Append the buttons container to the project card
-          projectCard.appendChild(buttonsDiv);
-
-          // Append the project card to the projects container
+          cardDetails.appendChild(buttonsDiv);
+          cardContent.appendChild(cardDetails);
+          projectCard.appendChild(cardContent);
+          
           container.appendChild(projectCard);
         });
-      })
-      .catch(error => {
-        console.error("Error fetching projects:", error);
-        document.getElementById("projects-container").innerHTML =
-          "<p>Error loading projects.</p>";
-      });
-  });
-</script>
+      }
+    });
+  </script>
 
       <!-- Skills Section -->
       <section id="skills" class="section">

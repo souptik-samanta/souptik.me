@@ -1,15 +1,42 @@
 [
-    {
-      "projectNumber": 1,
-      "title": "Personal Portfolio",
-      "repo": "https://github.com/souptik-samanta/souptik.me",
-      "img": "https://cloud-jckcb4n5b-hack-club-bot.vercel.app/0image.png"
-    },
-    {
-        "projectNumber": 2,
-        "title": "Weather App",
-        "repo": "https://example.com/image.jpg",
-        "img": "https://example.com/image.jpg"
-    }
-  ]
-  
+  {
+    "projectNumber": 1,
+    "title": "Personal Portfolio",
+    "repo": "https://github.com/souptik-samanta/souptik.me",
+    "demo": "https://www.souptik.me/",
+    "img": "https://cloud-jckcb4n5b-hack-club-bot.vercel.app/0image.png",
+    "description": "My personal portfolio website built with HTML, CSS, and JavaScript. Features a responsive design, dark mode toggle, and interactive project gallery."
+  },
+  {
+    "projectNumber": 2,
+    "title": "Weather Dashboard",
+    "repo": "https://github.com/username/weather-app",
+    "demo": "https://username.github.io/weather-app",
+    "img": "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "description": "A responsive weather application that shows current conditions and 5-day forecast using the OpenWeather API. Includes geolocation and search functionality."
+  },
+  {
+    "projectNumber": 3,
+    "title": "Task Tracker",
+    "repo": "https://github.com/username/task-tracker",
+    "demo": "https://username-task-tracker.netlify.app",
+    "img": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "description": "A React-based task management application with local storage persistence. Features include task creation, deletion, reminders, and category filtering."
+  },
+  {
+    "projectNumber": 4,
+    "title": "E-commerce Store",
+    "repo": "https://github.com/username/ecommerce-store",
+    "demo": "https://username-store.vercel.app",
+    "img": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "description": "A full-stack e-commerce platform built with MERN stack (MongoDB, Express, React, Node.js). Features product browsing, cart functionality, user authentication, and payment processing with Stripe."
+  },
+  {
+    "projectNumber": 5,
+    "title": "Movie Database App",
+    "repo": "https://github.com/username/movie-database",
+    "demo": "https://movie-db-username.herokuapp.com",
+    "img": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    "description": "A movie browsing application that uses the TMDB API. Users can search for movies, view details, save favorites, and create watchlists. Built with React and styled-components."
+  }
+]
