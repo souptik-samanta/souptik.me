@@ -94,10 +94,12 @@
         <button onclick="scrollToSection('skills')">Skills</button>
         <button onclick="scrollToSection('testimonials')">Testimonials</button>
         <button onclick="scrollToSection('blog')">Blog</button>
-        <button onclick="window.location.href='./contact-form/public/index.html'">Contact Me</button>
+        <!-- Uncomment if needed: <button onclick="window.location.href='./contact-form/public/index.html'">Contact Me</button> -->
+        <button onclick="scrollToSection('now-playing')">Now Playing</button>
       </div>
     </header>
     <main>
+      <!-- About Section -->
       <section id="about" class="section">
         <h2>About Me</h2>
         <p>
@@ -119,6 +121,7 @@
         </div>
       </section>
       
+      <!-- Skills Section -->
       <section id="skills" class="section">
         <h2>Skills</h2>
         <ul>
@@ -129,6 +132,7 @@
         </ul>
       </section>
       
+      <!-- Testimonials Section -->
       <section id="testimonials" class="section">
         <h2>Testimonials</h2>
         <div class="testimonial">
@@ -143,6 +147,7 @@
         </div>
       </section>
       
+      <!-- Blog Section -->
       <section id="blog" class="section">
         <h2>Blog</h2>
         <div class="blog-post">
@@ -157,6 +162,7 @@
         </div>
       </section>
       
+      <!-- Recent Updates Section -->
       <section id="news" class="section">
         <h2>Recent Updates</h2>
         <ul>
@@ -232,49 +238,50 @@
       });
     }
     
+    // --- Dynamic Projects Section ---
+    // Fetches projects from the /projects endpoint (data from data.json) and injects them into the DOM.
+    function loadProjects() {
+      $.getJSON('/projects', function(data) {
+        var container = $("#projects-container");
+        container.empty();
+        if (data.length === 0) {
+          container.append("<p>No projects added yet.</p>");
+        } else {
+          data.forEach(function(project) {
+            var projectCard = $("<div>").addClass("project-card");
+            if (project.img) {
+              var img = $("<img>")
+                .attr("src", project.img)
+                .attr("alt", project.title)
+                .css({ width: "200px", height: "auto" });
+              projectCard.append(img);
+            }
+            var title = $("<h3>").text(project.title);
+            projectCard.append(title);
+            var buttonsDiv = $("<div>").addClass("project-buttons");
+            if (project.repo) {
+              var repoButton = $("<button>")
+                .text("Repo")
+                .click(function() { window.open(project.repo, "_blank"); });
+              buttonsDiv.append(repoButton);
+            }
+            if (project.link) {
+              var demoButton = $("<button>")
+                .text("Demo")
+                .click(function() { window.open(project.link, "_blank"); });
+              buttonsDiv.append(demoButton);
+            }
+            projectCard.append(buttonsDiv);
+            container.append(projectCard);
+          });
+        }
+      });
+    }
+    
     $(document).ready(function() {
       updateNowPlaying();
       // Update now playing every 5 seconds.
       setInterval(updateNowPlaying, 5000);
-      
-      // --- Dynamic Projects Section ---
-      function loadProjects() {
-        $.getJSON('/projects', function(data) {
-          var container = $("#projects-container");
-          container.empty();
-          if (data.length === 0) {
-            container.append("<p>No projects added yet.</p>");
-          } else {
-            data.forEach(function(project) {
-              var projectCard = $("<div>").addClass("project-card");
-              if (project.img) {
-                var img = $("<img>")
-                  .attr("src", project.img)
-                  .attr("alt", project.title)
-                  .css({ width: "200px", height: "auto" });
-                projectCard.append(img);
-              }
-              var title = $("<h3>").text(project.title);
-              projectCard.append(title);
-              var buttonsDiv = $("<div>").addClass("project-buttons");
-              if (project.repo) {
-                var repoButton = $("<button>")
-                  .text("Repo")
-                  .click(function() { window.open(project.repo, "_blank"); });
-                buttonsDiv.append(repoButton);
-              }
-              if (project.link) {
-                var demoButton = $("<button>")
-                  .text("Demo")
-                  .click(function() { window.open(project.link, "_blank"); });
-                buttonsDiv.append(demoButton);
-              }
-              projectCard.append(buttonsDiv);
-              container.append(projectCard);
-            });
-          }
-        });
-      }
       
       loadProjects();
       // Optionally refresh projects every minute.
