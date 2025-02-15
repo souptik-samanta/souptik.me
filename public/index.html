@@ -116,46 +116,30 @@
 <!-- Dynamic Projects Section -->
 <section id="projects" class="section">
   <h2>Projects</h2>
-  <div id="projects-container">
-    <p>Loading projects...</p>
+  <div class="project-carousel">
+    <div class="project-card">
+      <h3>Personal Website</h3>
+      <p>Designed and developed a responsive portfolio website using modern web technologies.</p>
+      <a href="https://github.com/souptik-samanta/souptik.me" style="color: beige" target="_blank">GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>3D Printer</h3>
+      <p>Building a custom 3D printer from scratch to explore CAD and engineering principles.</p>
+      <a href="https://github.com/souptik-samanta/3D_printer" style="color: beige" target="_blank">GitHub</a>
+    </div>
+    <div class="project-card">
+      <h3>LLM (Caesar GPT)</h3>
+      <p>Built my own Large Language Model from scratch. Endorsed by Dr. Sebastian Raschka.</p>
+      <a href="https://github.com/souptik-samanta/llm" style="color: beige" target="_blank">GitHub</a>
+      <a href="https://huggingface.co/spaces/souptik1/Julius_souptik" style="color: beige" target="_blank">Live Link</a>
+    </div>
+    <div class="project-card">
+      <h3>RGB Controller</h3>
+      <p>Built my own RGB Strip Controller, fabricated by JLCPCB.</p>
+      <a href="https://github.com/souptik-samanta/Rgb_Controller" style="color: beige" target="_blank">GitHub</a>
+    </div>
   </div>
-</section>
-<script>
-  document.addEventListener("DOMContentLoaded", function() {
-    // Fetch the projects data from data.json
-    fetch("data.json")
-      .then(response => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok " + response.statusText);
-        }
-        return response.json();
-      })
-      .then(projects => {
-        const container = document.getElementById("projects-container");
-        container.innerHTML = ""; // Clear the "Loading projects..." message
-
-        projects.forEach(project => {
-          // Create a card for each project
-          const projectCard = document.createElement("div");
-          projectCard.classList.add("project-card");
-
-          // Display the project number (position)
-          const projectNumber = document.createElement("p");
-          projectNumber.classList.add("project-number");
-          projectNumber.textContent = "Project #" + project.projectNumber;
-          projectCard.appendChild(projectNumber);
-
-          // Display the project image, if provided
-          if (project.img) {
-            const img = document.createElement("img");
-            img.src = project.img;
-            img.alt = project.title;
-            img.style.width = "200px";  // Adjust styling as needed
-            projectCard.appendChild(img);
-          }
-
-          // Display the project title
-          const title = document.createElement("h3");
+</section>         const title = document.createElement("h3");
           title.textContent = project.title;
           projectCard.appendChild(title);
 
