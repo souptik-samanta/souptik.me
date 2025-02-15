@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Basic Meta Tags -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Discover the portfolio of Souptik Samanta, a hobbyist, coder, and maker. Explore custom-built 3D printers, RGB controllers, and large language models." />
+  <meta name="keywords" content="Souptik Samanta, Portfolio, Projects, Maker, Developer, Coding, 3D Printer, RGB Controller, Large Language Model, ICSE Student, Kolkata, India" />
+  <meta name="author" content="Souptik Samanta" />
+  <meta name="robots" content="index, follow" />
+  <meta name="language" content="English" />
+  <meta name="revisit-after" content="7 days" />
+  <meta name="distribution" content="global" />
+  
+  <!-- Open Graph Meta Tags -->
+  <meta property="og:title" content="Souptik Samanta | Hobbyist, Coder, Maker" />
+  <meta property="og:description" content="Explore the projects and skills of Souptik Samanta, including custom-built 3D printers, RGB controllers, and Large Language Models." />
+  <meta property="og:image" content="https://cloud-2yhlt75w0-hack-club-bot.vercel.app/0img.png" />
+  <meta property="og:url" content="https://souptik.me" />
+  <meta property="og:type" content="website" />
+  
+  <!-- Twitter Card Meta Tags -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Souptik Samanta | Portfolio" />
+  <meta name="twitter:description" content="Check out Souptik's portfolio featuring 3D printers, RGB controllers, and AI projects." />
+  <meta name="twitter:image" content="https://cloud-2yhlt75w0-hack-club-bot.vercel.app/0img.png" />
+  <meta name="twitter:site" content="@souptik.me" />
+  
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://souptik.me" />
+  
+  <!-- Page Title -->
+  <title>Souptik Samanta | Portfolio</title>
+  
+  <!-- CSS -->
+  <link rel="stylesheet" href="style.css" />
+  
+  <!-- jQuery (for simplicity) -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  
+  <!-- Schema.org Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Souptik Samanta Portfolio",
+    "url": "https://souptik.me",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://souptik.me/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    },
+    "description": "Portfolio of Souptik Samanta - Hobbyist, Coder, and Maker. Explore projects, skills, and contact details."
+  }
+  </script>
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Souptik Samanta",
+    "url": "https://souptik.me",
+    "image": "https://cloud-2yhlt75w0-hack-club-bot.vercel.app/0img.png",
+    "jobTitle": "Maker and Coder",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Kolkata",
+      "addressCountry": "India"
+    },
+    "sameAs": [
+      "https://github.com/souptik-samanta",
+      "https://www.linkedin.com/in/me-souptik/",
+      "https://www.instagram.com/souptik.me"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <!-- Main overlay -->
+  <div class="overlay">
+    <img src="https://cdn.hackclubber.dev/slackcdn/8135397394c51a9e90c4ea463f242deb.png" alt="Profile Picture of Souptik Samanta" class="profile-pic" />
+    <div class="name">Souptik Samanta</div>
+    <div class="subtitle"><span id="greeting"></span> Hobbyist | Coder | Maker</div>
+    <div id="time-display" class="time"></div>
+  </div>
+  
+  <img id="mountain-image" src="https://cdn.hackclubber.dev/slackcdn/baec48be97ced99c00f0bacae4a564be.jpg" alt="Mountain View" class="mountain-image" />
+  
+  <div id="app" class="container">
+    <header class="hero">
+      <div class="buttons">
+        <button onclick="scrollToSection('about')">About Me</button>
+        <button onclick="scrollToSection('projects')">Projects</button>
+        <button onclick="scrollToSection('skills')">Skills</button>
+        <button onclick="scrollToSection('testimonials')">Testimonials</button>
+        <button onclick="scrollToSection('blog')">Blog</button>
+        <button onclick="window.location.href='./contact-form/public/index.html'">Contact Me</button>
+      </div>
+    </header>
+    <main>
+      <section id="about" class="section">
+        <h2>About Me</h2>
+        <p>
+          I am a passionate maker who loves technologies and is ready to collaborate with anyone as a team member.
+          <br />
+          I am a self-taught programmer who is always eager to learn new things and explore technologies.
+          <br />
+          Currently in Class 10th (ICSE) at Agrasain Boys School in Kolkata, India.
+          <br />
+          This website was made to showcase my projects and skills.
+        </p>
+      </section>
+      
+      <!-- Dynamic Projects Section -->
+      <section id="projects" class="section">
+        <h2>Projects</h2>
+        <div id="projects-container">
+          <p>Loading projects...</p>
+        </div>
+      </section>
+      
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <ul>
+          <li>Programming Languages: Python, JavaScript, C++</li>
+          <li>Technologies: HTML, CSS, React, Node.js</li>
+          <li>Tools: GitHub, GitLab, Jupyter Notebook</li>
+          <li>Hardware: 3D Printing, Soldering, PCB Design</li>
+        </ul>
+      </section>
+      
+      <section id="testimonials" class="section">
+        <h2>Testimonials</h2>
+        <div class="testimonial">
+          <blockquote>
+            "Souptik is a brilliant young maker and coder. His projects are innovative and well-documented."
+            <cite>- Dr. Sebastian Raschka</cite>
+          </blockquote>
+          <blockquote>
+            "I had the pleasure of working with Souptik on a project. He is highly skilled and a great team player."
+            <cite>- Zach Latta, CEO Hack Club</cite>
+          </blockquote>
+        </div>
+      </section>
+      
+      <section id="blog" class="section">
+        <h2>Blog</h2>
+        <div class="blog-post">
+          <h3>Building a Custom 3D Printer</h3>
+          <p>Learn how I built my own 3D printer from scratch.</p>
+          <a href="https://souptik.me/blog/3d-printer" style="color: beige" target="_blank">Read More</a>
+        </div>
+        <div class="blog-post">
+          <h3>Creating a Large Language Model</h3>
+          <p>Exploring the process of building a large language model from scratch.</p>
+          <a href="https://souptik.me/blog/llm" style="color: beige" target="_blank">Read More</a>
+        </div>
+      </section>
+      
+      <section id="news" class="section">
+        <h2>Recent Updates</h2>
+        <ul>
+          <li>New blog post: "Building a Custom 3D Printer" - <a href="https://souptik.me/blog/3d-printer" style="color: beige" target="_blank">Read More</a></li>
+          <li>Featured on Hack Club Blog - <a href="https://hackclub.com/blog/souptik-samanta" style="color: beige" target="_blank">Read Article</a></li>
+          <li>Updated my LLM project - <a href="https://github.com/souptik-samanta/llm" style="color: beige" target="_blank">View Changes</a></li>
+        </ul>
+      </section>
+      
+      <!-- Now Playing Section -->
+      <section id="now-playing" class="section">
+        <h2>Now Playing</h2>
+        <div id="spotify-container" style="display: flex; align-items: center;">
+          <img id="album-art" src="public/img/demo_album.png" alt="Album Art" width="100" height="100" style="margin-right: 20px;">
+          <div id="song-info" style="flex: 1;">
+            <div id="song-title" style="font-size: 1.2em; font-weight: bold;">Loading...</div>
+            <div id="artist-name" style="margin-bottom: 10px;">Please wait</div>
+            <div id="progress-bar" style="width: 100%; background: #ddd; height: 10px; border-radius: 5px; overflow: hidden; margin-bottom: 5px;">
+              <div id="progress" style="background: #1db954; height: 100%; width: 0;"></div>
+            </div>
+            <div id="time-info" style="font-size: 0.9em;">0:00 / 0:00</div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+  
+  <p style="text-align: center;">
+    <a class="copyright" href="https://github.com/souptik-samanta">© 2024 Souptik Samanta</a>
+  </p>
+  
+  <!-- Client-side Scripts -->
+  <script>
+    // Smooth scroll utility.
+    function scrollToSection(id) {
+      var element = document.getElementById(id);
+      if (element) element.scrollIntoView({ behavior: "smooth" });
+    }
+    
+    // Utility to format seconds as M:SS.
+    function formatTime(seconds) {
+      var mins = Math.floor(seconds / 60);
+      var secs = seconds % 60;
+      return mins + ":" + (secs < 10 ? "0" : "") + secs;
+    }
+    
+    // --- Now Playing Logic ---
+    // Calls the server-side /now-playing endpoint to fetch track info and elapsed time.
+    function updateNowPlaying() {
+      $.getJSON('/now-playing', function(data) {
+        if (data.nowPlaying) {
+          $("#song-title").text(data.track.name);
+          $("#artist-name").text(data.track.artist);
+          $("#album-art").attr("src", data.track.albumArt);
+          var progressPercent = Math.min((data.elapsed / data.track.duration) * 100, 100);
+          $("#progress").css("width", progressPercent + "%");
+          $("#time-info").text(formatTime(data.elapsed) + " / " + formatTime(data.track.duration));
+        } else {
+          if (data.track) {
+            $("#song-title").text(data.track.name);
+            $("#artist-name").text(data.track.artist);
+            $("#album-art").attr("src", data.track.albumArt);
+          }
+          if (data.lastPlayed) {
+            $("#time-info").text("Last played: " + data.lastPlayed);
+          } else {
+            $("#time-info").text("Not currently playing");
+          }
+          $("#progress").css("width", "100%");
+        }
+      }).fail(function(err){
+        console.error("Error fetching now playing data", err);
+      });
+    }
+    
+    $(document).ready(function() {
+      updateNowPlaying();
+      // Update now playing every 5 seconds.
+      setInterval(updateNowPlaying, 5000);
+      
+      // --- Dynamic Projects Section ---
+      function loadProjects() {
+        $.getJSON('/projects', function(data) {
+          var container = $("#projects-container");
+          container.empty();
+          if (data.length === 0) {
+            container.append("<p>No projects added yet.</p>");
+          } else {
+            data.forEach(function(project) {
+              var projectCard = $("<div>").addClass("project-card");
+              if (project.img) {
+                var img = $("<img>")
+                  .attr("src", project.img)
+                  .attr("alt", project.title)
+                  .css({ width: "200px", height: "auto" });
+                projectCard.append(img);
+              }
+              var title = $("<h3>").text(project.title);
+              projectCard.append(title);
+              var buttonsDiv = $("<div>").addClass("project-buttons");
+              if (project.repo) {
+                var repoButton = $("<button>")
+                  .text("Repo")
+                  .click(function() { window.open(project.repo, "_blank"); });
+                buttonsDiv.append(repoButton);
+              }
+              if (project.link) {
+                var demoButton = $("<button>")
+                  .text("Demo")
+                  .click(function() { window.open(project.link, "_blank"); });
+                buttonsDiv.append(demoButton);
+              }
+              projectCard.append(buttonsDiv);
+              container.append(projectCard);
+            });
+          }
+        });
+      }
+      
+      loadProjects();
+      // Optionally refresh projects every minute.
+      setInterval(loadProjects, 60000);
+    });
+  </script>
+</body>
+</html>

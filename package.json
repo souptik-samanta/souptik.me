@@ -1,0 +1,18 @@
+{
+  "name": "souptik.me",
+  "version": "1.0.0",
+  "description": "Welcome to my personal portfolio! This website showcases my work, projects, and skills as a hobbyist, coder, and maker. It's built using HTML, CSS, and JavaScript with smooth scrolling features and an interactive UX.",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "node-fetch": "^3.3.2"
+  }
+}
