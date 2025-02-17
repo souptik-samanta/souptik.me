@@ -9,11 +9,11 @@
   },
   {
     "projectNumber": 2,
-    "title": "Weather Dashboard",
-    "repo": "https://github.com/username/weather-app",
-    "demo": "https://username.github.io/weather-app",
-    "img": "https://images.unsplash.com/photo-1592210454359-9043f067919b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "A responsive weather application that shows current conditions and 5-day forecast using the OpenWeather API. Includes geolocation and search functionality."
+    "title": "OWN KEYBOARD",
+    "repo": "https://github.com/souptik-samanta/Kommie-keeb",
+    "demo": "https://keyboard.souptik.me/",
+    "img": "https://cdn.hackclubber.dev/slackcdn/73683540eab29ba12fd7827f61e20151.png",
+    "description": "Kommie-keeb is an 88-key custom mechanical keyboard by Souptik Samanta, featuring an elegant ANSI layout, premium Cherry MX switches, and an OLED display on a custom PCB."
   },
   {
     "projectNumber": 3,
