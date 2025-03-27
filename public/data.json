@@ -14,29 +14,5 @@
     "demo": "https://keyboard.souptik.me/",
     "img": "https://cdn.hackclubber.dev/slackcdn/73683540eab29ba12fd7827f61e20151.png",
     "description": "Kommie-keeb is an 88-key custom mechanical keyboard by Souptik Samanta, featuring an elegant ANSI layout, premium Cherry MX switches, and an OLED display on a custom PCB."
-  },
-  {
-    "projectNumber": 3,
-    "title": "Task Tracker",
-    "repo": "https://github.com/username/task-tracker",
-    "demo": "https://username-task-tracker.netlify.app",
-    "img": "https://images.unsplash.com/photo-1484480974693-6ca0a78fb36b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "A React-based task management application with local storage persistence. Features include task creation, deletion, reminders, and category filtering."
-  },
-  {
-    "projectNumber": 4,
-    "title": "E-commerce Store",
-    "repo": "https://github.com/username/ecommerce-store",
-    "demo": "https://username-store.vercel.app",
-    "img": "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "A full-stack e-commerce platform built with MERN stack (MongoDB, Express, React, Node.js). Features product browsing, cart functionality, user authentication, and payment processing with Stripe."
-  },
-  {
-    "projectNumber": 5,
-    "title": "Movie Database App",
-    "repo": "https://github.com/username/movie-database",
-    "demo": "https://movie-db-username.herokuapp.com",
-    "img": "https://images.unsplash.com/photo-1478720568477-152d9b164e26?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
-    "description": "A movie browsing application that uses the TMDB API. Users can search for movies, view details, save favorites, and create watchlists. Built with React and styled-components."
   }
 ]
