@@ -56,7 +56,7 @@ const Portfolio = () => {
       tech: ["Python", "TensorFlow", "React", "D3.js"],
       github: "#",
       live: "#",
-      color: "from-[#042B44] to-[#FFD60A]"
+      color: "from-[#FFD700] to-[#FFA500]"
     },
     {
       title: "Discord Bot Army",
@@ -64,7 +64,7 @@ const Portfolio = () => {
       tech: ["Node.js", "Discord.js", "MongoDB", "Redis"],
       github: "#",
       live: "#",
-      color: "from-[#3A86FF] to-[#FFD60A]"
+      color: "from-[#40E0D0] to-[#87CEEB]"
     },
     {
       title: "Crypto Trading Dashboard",
@@ -72,7 +72,7 @@ const Portfolio = () => {
       tech: ["React", "WebSocket", "Chart.js", "Node.js"],
       github: "#",
       live: "#",
-      color: "from-[#87CEEB] to-[#FFE55C]"
+      color: "from-[#FFE55C] to-[#FFA500]"
     },
     {
       title: "AI Code Assistant",
@@ -80,17 +80,17 @@ const Portfolio = () => {
       tech: ["TypeScript", "OpenAI API", "VSCode API"],
       github: "#",
       live: "#",
-      color: "from-[#4CC9F0] to-[#FFEAA7]"
+      color: "from-[#48CAE4] to-[#FFD700]"
     }
   ];
 
   const skills = [
-    { name: "JavaScript", icon: Code, level: 95, color: "text-[#FFD60A]" },
-    { name: "TypeScript", icon: Terminal, level: 92, color: "text-[#87CEEB]" },
-    { name: "React", icon: Cpu, level: 94, color: "text-[#3A86FF]" },
-    { name: "Node.js", icon: Zap, level: 89, color: "text-[#4CC9F0]" },
-    { name: "Python", icon: Database, level: 87, color: "text-[#FFE55C]" },
-    { name: "UI/UX Design", icon: Palette, level: 83, color: "text-[#FFEAA7]" },
+    { name: "JavaScript", icon: Code, level: 95, color: "text-[#FFD700]" },
+    { name: "TypeScript", icon: Terminal, level: 92, color: "text-[#40E0D0]" },
+    { name: "React", icon: Cpu, level: 94, color: "text-[#87CEEB]" },
+    { name: "Node.js", icon: Zap, level: 89, color: "text-[#48CAE4]" },
+    { name: "Python", icon: Database, level: 87, color: "text-[#FFA500]" },
+    { name: "UI/UX Design", icon: Palette, level: 83, color: "text-[#FFE55C]" },
   ];
 
   const testimonials = [
@@ -139,11 +139,18 @@ const Portfolio = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-[#08171E] text-white font-mono">
-      <nav className="fixed top-0 w-full bg-[#08171E]/95 backdrop-blur-xl border-b border-[#3A86FF]/30 z-50">
+    <div className="min-h-screen bg-gradient-to-br from-[#001122] via-[#003366] to-[#004488] text-white font-mono relative overflow-hidden">
+      <div className="absolute top-0 left-0 w-full h-full pointer-events-none">
+        <div className="absolute top-10 left-10 w-32 h-32 bg-gradient-to-br from-[#FFD700] to-[#FFA500] rounded-full opacity-20 blur-xl"></div>
+        <div className="absolute top-1/4 right-20 w-24 h-24 bg-gradient-to-br from-[#87CEEB] to-[#00BFFF] rounded-full opacity-30 blur-lg"></div>
+        <div className="absolute bottom-1/3 left-1/4 w-40 h-40 bg-gradient-to-br from-[#FFE55C] to-[#FF6B35] rounded-full opacity-15 blur-2xl"></div>
+        <div className="absolute top-1/2 right-1/3 w-28 h-28 bg-gradient-to-br from-[#40E0D0] to-[#48CAE4] rounded-full opacity-25 blur-xl"></div>
+        <div className="absolute bottom-20 right-10 w-36 h-36 bg-gradient-to-br from-[#FFEAA7] to-[#FFD93D] rounded-full opacity-20 blur-xl"></div>
+      </div>
+      <nav className="fixed top-0 w-full bg-gradient-to-r from-[#001122]/95 via-[#003366]/95 to-[#004488]/95 backdrop-blur-xl border-b border-[#40E0D0]/30 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
-            <div className="text-[#FFD60A] font-bold text-xl tracking-wide">
+            <div className="text-[#FFD700] font-bold text-xl tracking-wide drop-shadow-lg">
               &lt;/Souptik&gt;
             </div>
             
@@ -152,13 +159,13 @@ const Portfolio = () => {
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className={`capitalize hover:text-[#FFD60A] transition-all duration-300 relative ${
-                    currentSection === item ? 'text-[#FFD60A]' : 'text-gray-300'
+                  className={`capitalize hover:text-[#FFD700] transition-all duration-300 relative ${
+                    currentSection === item ? 'text-[#FFD700]' : 'text-gray-300'
                   }`}
                 >
                   {item}
                   {currentSection === item && (
-                    <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-[#FFD60A] to-[#87CEEB]"></div>
+                    <div className="absolute -bottom-1 left-0 w-full h-0.5 bg-gradient-to-r from-[#FFD700] to-[#40E0D0]"></div>
                   )}
                 </button>
               ))}
@@ -178,13 +185,13 @@ const Portfolio = () => {
         </div>
 
         {isMenuOpen && (
-          <div className="md:hidden bg-[#042B44] border-t border-[#3A86FF]/30">
+          <div className="md:hidden bg-gradient-to-r from-[#001122] to-[#003366] border-t border-[#40E0D0]/30">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {['home', 'about', 'projects', 'skills', 'testimonials', 'blog'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
-                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-[#FFD60A] capitalize w-full text-left transition-colors duration-300"
+                  className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-[#FFD700] capitalize w-full text-left transition-colors duration-300"
                 >
                   {item}
                 </button>
@@ -194,16 +201,18 @@ const Portfolio = () => {
         )}
       </nav>
 
-      <section id="home" className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#08171E] via-[#042B44] to-[#08171E]">
-        <div className="text-center max-w-5xl mx-auto">
+      <section id="home" className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#001122] via-[#003366] to-[#004488] relative">
+        <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FFD700]/20 to-[#FFA500]/20 rounded-full blur-3xl"></div>
+        <div className="absolute bottom-32 right-16 w-48 h-48 bg-gradient-to-br from-[#40E0D0]/30 to-[#87CEEB]/30 rounded-full blur-2xl"></div>
+        <div className="text-center max-w-5xl mx-auto relative z-10">
           <div className="mb-8">
-            <div className="text-[#87CEEB] text-sm mb-2 tracking-wide">~/souptik-samanta $</div>
-            <div className="text-2xl md:text-4xl font-bold mb-4 min-h-[3rem] text-[#4CC9F0]">
+            <div className="text-[#40E0D0] text-sm mb-2 tracking-wide">~/souptik-samanta $</div>
+            <div className="text-2xl md:text-4xl font-bold mb-4 min-h-[3rem] text-[#87CEEB]">
               {typedText}<span className="animate-pulse">|</span>
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#4CC9F0] via-[#FFD60A] to-[#3A86FF] bg-clip-text text-transparent leading-tight">
+          <h1 className="text-5xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#40E0D0] to-[#87CEEB] bg-clip-text text-transparent leading-tight drop-shadow-2xl">
             Full Stack Developer
           </h1>
           
@@ -212,40 +221,42 @@ const Portfolio = () => {
           </p>
           
           <div className="flex justify-center space-x-6 mb-12">
-            <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+            <a href="#" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+            <a href="#" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Twitter className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+            <a href="#" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Mail className="w-6 h-6" />
             </a>
           </div>
           
           <button
             onClick={() => scrollToSection('projects')}
-            className="bg-gradient-to-r from-[#3A86FF] to-[#FFD60A] px-10 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-[#FFD60A]/30 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-black"
+            className="bg-gradient-to-r from-[#FFD700] to-[#40E0D0] px-10 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-[#FFD700]/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-black"
           >
             Explore My Work
           </button>
           
           <div className="mt-16 animate-bounce">
-            <ChevronDown className="w-8 h-8 mx-auto text-[#87CEEB]" />
+            <ChevronDown className="w-8 h-8 mx-auto text-[#40E0D0]" />
           </div>
         </div>
       </section>
 
-      <section id="about" className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
+      <section id="about" className="py-24 px-4 relative">
+        <div className="absolute top-10 right-10 w-32 h-32 bg-gradient-to-br from-[#FFD700]/10 to-[#FFA500]/10 rounded-full blur-xl"></div>
+        <div className="absolute bottom-20 left-16 w-28 h-28 bg-gradient-to-br from-[#40E0D0]/15 to-[#87CEEB]/15 rounded-full blur-lg"></div>
+        <div className="max-w-7xl mx-auto relative z-10">
           <h2 className="text-5xl font-bold mb-16 text-center">
-            About <span className="text-[#FFD60A]">Me</span>
+            About <span className="text-[#FFD700]">Me</span>
           </h2>
           
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div className="space-y-8">
-              <div className="bg-gradient-to-br from-[#042B44] to-[#08171E] p-8 rounded-2xl border border-[#3A86FF]/30 hover:border-[#FFD60A]/50 transition-all duration-300">
-                <h3 className="text-2xl font-semibold mb-6 text-[#87CEEB]">The Journey</h3>
+              <div className="bg-gradient-to-br from-[#001122]/80 to-[#003366]/80 p-8 rounded-2xl border border-[#40E0D0]/30 hover:border-[#FFD700]/50 transition-all duration-300 backdrop-blur-sm">
+                <h3 className="text-2xl font-semibold mb-6 text-[#40E0D0]">The Journey</h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
                   My coding journey began at 12 when I discovered Python while trying to automate my homework. 
                   Four years later, I've built production applications, contributed to open source projects, 
@@ -253,8 +264,8 @@ const Portfolio = () => {
                 </p>
               </div>
               
-              <div className="bg-gradient-to-br from-[#042B44] to-[#08171E] p-8 rounded-2xl border border-[#3A86FF]/30 hover:border-[#FFD60A]/50 transition-all duration-300">
-                <h3 className="text-2xl font-semibold mb-6 text-[#FFE55C]">Philosophy</h3>
+              <div className="bg-gradient-to-br from-[#001122]/80 to-[#003366]/80 p-8 rounded-2xl border border-[#40E0D0]/30 hover:border-[#FFD700]/50 transition-all duration-300 backdrop-blur-sm">
+                <h3 className="text-2xl font-semibold mb-6 text-[#FFD700]">Philosophy</h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
                   I'm passionate about creating technology that makes a difference. Whether it's optimizing 
                   algorithms for better performance or designing intuitive user interfaces, I focus on 
@@ -264,20 +275,20 @@ const Portfolio = () => {
             </div>
             
             <div className="space-y-6">
-              <div className="bg-gradient-to-r from-[#3A86FF]/20 to-[#FFD60A]/20 p-8 rounded-2xl border border-[#FFD60A]/30 hover:scale-105 transition-all duration-300">
-                <Coffee className="w-10 h-10 text-[#FFD60A] mb-4" />
+              <div className="bg-gradient-to-r from-[#40E0D0]/20 to-[#FFD700]/20 p-8 rounded-2xl border border-[#FFD700]/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+                <Coffee className="w-10 h-10 text-[#FFD700] mb-4" />
                 <h4 className="font-semibold mb-3 text-xl">Coffee-Driven Development</h4>
                 <p className="text-gray-400">Averaging 5 cups during intensive coding sessions</p>
               </div>
               
-              <div className="bg-gradient-to-r from-[#87CEEB]/20 to-[#3A86FF]/20 p-8 rounded-2xl border border-[#87CEEB]/30 hover:scale-105 transition-all duration-300">
+              <div className="bg-gradient-to-r from-[#87CEEB]/20 to-[#40E0D0]/20 p-8 rounded-2xl border border-[#87CEEB]/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <Terminal className="w-10 h-10 text-[#87CEEB] mb-4" />
                 <h4 className="font-semibold mb-3 text-xl">Terminal Native</h4>
                 <p className="text-gray-400">Vim enthusiast with custom dotfiles</p>
               </div>
               
-              <div className="bg-gradient-to-r from-[#4CC9F0]/20 to-[#FFE55C]/20 p-8 rounded-2xl border border-[#4CC9F0]/30 hover:scale-105 transition-all duration-300">
-                <Globe className="w-10 h-10 text-[#4CC9F0] mb-4" />
+              <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-8 rounded-2xl border border-[#40E0D0]/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm">
+                <Globe className="w-10 h-10 text-[#40E0D0] mb-4" />
                 <h4 className="font-semibold mb-3 text-xl">Open Source Advocate</h4>
                 <p className="text-gray-400">25+ merged PRs across various projects</p>
               </div>
