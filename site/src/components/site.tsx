@@ -404,51 +404,7 @@ const Portfolio = () => {
         </div>
       </section>
 
-      <section id="blog" className="py-24 px-4">
-        <div className="max-w-7xl mx-auto">
-          <h2 className="text-5xl font-bold mb-16 text-center">
-            Latest <span className="text-[#FFD60A]">Articles</span>
-          </h2>
-          
-          <div className="space-y-8">
-            {blogPosts.map((post, index) => (
-              <article key={index} className="bg-gradient-to-br from-[#042B44] to-[#08171E] p-8 rounded-2xl border border-[#3A86FF]/30 hover:border-[#FFD60A]/50 transition-all duration-500 group hover:transform hover:scale-[1.01]">
-                <div className="flex flex-col lg:flex-row lg:items-start lg:justify-between">
-                  <div className="flex-1">
-                    <h3 className="text-2xl font-semibold mb-4 group-hover:text-[#FFD60A] transition-colors duration-300">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-300 mb-4 leading-relaxed">{post.excerpt}</p>
-                    <div className="flex items-center space-x-6 text-sm text-[#87CEEB] mb-4">
-                      <span>{post.date}</span>
-                      <span>•</span>
-                      <span>{post.readTime}</span>
-                    </div>
-                    <div className="flex flex-wrap gap-3">
-                      {post.tags.map((tag, tagIndex) => (
-                        <span key={tagIndex} className="px-3 py-1 bg-[#3A86FF]/30 rounded-lg text-xs text-[#FFD60A] border border-[#3A86FF]/50">
-                          #{tag}
-                        </span>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="mt-6 lg:mt-0 lg:ml-8">
-                    <button className="bg-gradient-to-r from-[#3A86FF] to-[#FFD60A] px-6 py-3 rounded-lg font-medium hover:shadow-lg hover:shadow-[#FFD60A]/25 transition-all duration-300 transform hover:scale-105 text-black">
-                      Read Article →
-                    </button>
-                  </div>
-                </div>
-              </article>
-            ))}
-          </div>
-          
-          <div className="text-center mt-12">
-            <button className="bg-gradient-to-r from-[#042B44] to-[#3A86FF] hover:from-[#3A86FF] hover:to-[#FFD60A] px-8 py-4 rounded-xl transition-all duration-300 transform hover:scale-105 border border-[#3A86FF]/50">
-              View All Articles
-            </button>
-          </div>
-        </div>
-      </section>
+
 
       <footer className="py-16 px-4 bg-gradient-to-t from-[#042B44] to-[#08171E] border-t border-[#3A86FF]/30">
         <div className="max-w-7xl mx-auto text-center">
