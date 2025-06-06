@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe, Instagram, CircuitBoard, Computer } from 'lucide-react';
+import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe, Instagram, CircuitBoard, Computer, Blocks, ApertureIcon, Aperture } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -82,9 +82,10 @@ const Portfolio = () => {
     { name: "React", icon: Cpu, level: 85, color: "text-[#87CEEB]" },
     { name: "Node.js", icon: Zap, level: 90, color: "text-[#48CAE4]" },
     { name: "Python", icon: Database, level: 85, color: "text-[#FFA500]"},
-    { name: "CAD/3D modelling", icon: Palette, level: 90, color: "text-[#FFE55C]" },
+    { name: "CAD/3D modelling", icon: Blocks, level: 90, color: "text-[#FFE55C]" },
     { name: "Kicad/PCBs", icon: CircuitBoard, level: 90, color: "text-[#FFE55C]" },
-    { name: "AI/ML", icon: Computer, level: 70, color: "text-[#FFE55C]" }
+    { name: "AI/ML", icon: Computer, level: 70, color: "text-[#FFE55C]" },
+    { name: "Express.js", icon: Aperture, level: 90, color: "text-[#FFE55C]" }
   ];
 
   const testimonials = [
@@ -98,8 +99,15 @@ const Portfolio = () => {
       name: "Dr. Sebastian Rachska",
       role: "AI/ML Professor",
       text: "Delivered a complex payment integration ahead of schedule. His attention to detail and problem-solving skills are remarkable.",
-      avatar: "JR"
+      avatar: "SR"
+    },
+        {
+      name: "Manan Sharma",
+      role: "Developer",
+      text: "Souptik's PCB skills are exceptional, great innovator.",
+      avatar: "MS"
     }
+    
   ];
 
   const blogPosts = [
@@ -267,20 +275,20 @@ const Portfolio = () => {
             <div className="space-y-6">
               <div className="bg-gradient-to-r from-[#40E0D0]/20 to-[#FFD700]/20 p-8 rounded-2xl border border-[#FFD700]/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <Coffee className="w-10 h-10 text-[#FFD700] mb-4" />
-                <h4 className="font-semibold mb-3 text-xl">Coffee-Driven Development</h4>
-                <p className="text-gray-400">Averaging 5 cups during intensive coding sessions</p>
+                <h4 className="font-semibold mb-3 text-xl">Caffeine-driven development</h4>
+                <p className="text-gray-400">Averaging 5 cans during intensive coding sessions</p>
               </div>
               
               <div className="bg-gradient-to-r from-[#87CEEB]/20 to-[#40E0D0]/20 p-8 rounded-2xl border border-[#87CEEB]/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <Terminal className="w-10 h-10 text-[#87CEEB] mb-4" />
-                <h4 className="font-semibold mb-3 text-xl">Terminal Native</h4>
-                <p className="text-gray-400">Vim enthusiast with custom dotfiles</p>
+                <h4 className="font-semibold mb-3 text-xl">Low level enthusiast</h4>
+                <p className="text-gray-400">I'm deep into low level tech and development.</p>
               </div>
               
               <div className="bg-gradient-to-r from-[#FFD700]/20 to-[#FFA500]/20 p-8 rounded-2xl border border-[#40E0D0]/30 hover:scale-105 transition-all duration-300 backdrop-blur-sm">
                 <Globe className="w-10 h-10 text-[#40E0D0] mb-4" />
-                <h4 className="font-semibold mb-3 text-xl">Open Source Advocate</h4>
-                <p className="text-gray-400">25+ merged PRs across various projects</p>
+                <h4 className="font-semibold mb-3 text-xl">Volunteering enthusiast</h4>
+                <p className="text-gray-400">I've volunteered as a coder, reviewer at many small organisations. Currently I'm volunteering as a reviewer and developer at <a href='https://hackclub.com'>Hack Club</a>.</p>
               </div>
             </div>
           </div>
