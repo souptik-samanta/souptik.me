@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe, Instagram, CircuitBoard, Computer, Blocks, ApertureIcon, Aperture } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Database, Globe, Instagram, CircuitBoard, Computer, Blocks, Aperture } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -116,30 +116,6 @@ const Portfolio = () => {
       avatar: "MS"
     }
     
-  ];
-
-  const blogPosts = [
-    {
-      title: "Making an AI model from scratch.",
-      date: "3 days ago",
-      readTime: "12 min read",
-      tags: ["Backend", "Architecture", "Performance"],
-      excerpt: "Deep dive into API design patterns that actually work in production environments."
-    },
-    {
-      title: "The Psychology of Code Reviews",
-      date: "1 week ago",
-      readTime: "8 min read",
-      tags: ["Team", "Culture", "Best Practices"],
-      excerpt: "How to give and receive code reviews that actually improve team dynamics."
-    },
-    {
-      title: "TypeScript: Beyond the Basics",
-      date: "2 weeks ago",
-      readTime: "15 min read",
-      tags: ["TypeScript", "Advanced", "Tutorial"],
-      excerpt: "Advanced TypeScript patterns for building robust, maintainable applications."
-    }
   ];
 
   return (
