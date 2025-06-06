@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe, Instagram } from 'lucide-react';
+import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe, Instagram, CircuitBoard, Computer } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -85,38 +85,34 @@ const Portfolio = () => {
   ];
 
   const skills = [
-    { name: "JavaScript", icon: Code, level: 95, color: "text-[#FFD700]" },
-    { name: "TypeScript", icon: Terminal, level: 92, color: "text-[#40E0D0]" },
-    { name: "React", icon: Cpu, level: 94, color: "text-[#87CEEB]" },
-    { name: "Node.js", icon: Zap, level: 89, color: "text-[#48CAE4]" },
-    { name: "Python", icon: Database, level: 87, color: "text-[#FFA500]" },
-    { name: "UI/UX Design", icon: Palette, level: 83, color: "text-[#FFE55C]" },
+    { name: "JavaScript", icon: Code, level: 95, color: "text-[#FFD700]"},
+    { name: "TypeScript", icon: Terminal, level: 95, color: "text-[#40E0D0]" },
+    { name: "React", icon: Cpu, level: 85, color: "text-[#87CEEB]" },
+    { name: "Node.js", icon: Zap, level: 90, color: "text-[#48CAE4]" },
+    { name: "Python", icon: Database, level: 85, color: "text-[#FFA500]"},
+    { name: "CAD/3D modelling", icon: Palette, level: 90, color: "text-[#FFE55C]" },
+    { name: "Kicad/PCBs", icon: CircuitBoard, level: 90, color: "text-[#FFE55C]" },
+    { name: "AI/ML", icon: Computer, level: 70, color: "text-[#FFE55C]" }
   ];
 
   const testimonials = [
     {
-      name: "Alexandra Chen",
-      role: "Senior Developer @ Microsoft",
-      text: "Souptik's code quality and architectural thinking rival developers with years more experience. Exceptional talent.",
-      avatar: "AC"
+      name: "Zach Latta",
+      role: "Founder and Executive Director @ Hack Club",
+      text: "Souptik is a great team player, exceptional developer.",
+      avatar: "ZRL"
     },
     {
-      name: "James Rodriguez",
-      role: "Tech Lead @ Stripe",
+      name: "Dr. Sebastian Rachska",
+      role: "AI/ML Professor",
       text: "Delivered a complex payment integration ahead of schedule. His attention to detail and problem-solving skills are remarkable.",
       avatar: "JR"
-    },
-    {
-      name: "Emily Watson",
-      role: "CTO @ TechFlow",
-      text: "Rare to find someone so young with such mature coding practices. Souptik is the future of software development.",
-      avatar: "EW"
     }
   ];
 
   const blogPosts = [
     {
-      title: "Building Scalable APIs: Lessons from Production",
+      title: "Making an AI model from scratch.",
       date: "3 days ago",
       readTime: "12 min read",
       tags: ["Backend", "Architecture", "Performance"],
@@ -375,7 +371,7 @@ const Portfolio = () => {
       <section id="testimonials" className="py-24 px-4 bg-gradient-to-b from-[#042B44] to-[#08171E]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold mb-16 text-center">
-            Client <span className="text-[#FFD60A]">Testimonials</span>
+            <span className="text-[#FFD60A]">Testimonials</span>
           </h2>
           
           <div className="grid lg:grid-cols-3 gap-8">
