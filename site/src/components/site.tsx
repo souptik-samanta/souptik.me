@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe } from 'lucide-react';
+import { ChevronDown, Github, Twitter, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Palette, Database, Globe, Instagram } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -151,7 +151,7 @@ const Portfolio = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
             <div className="text-[#FFD700] font-bold text-xl tracking-wide drop-shadow-lg">
-              &lt;/Souptik&gt;
+              &lt;Souptik /&gt;
             </div>
             
             <div className="hidden md:flex space-x-8">
@@ -201,7 +201,14 @@ const Portfolio = () => {
         )}
       </nav>
 
-      <section id="home" className="min-h-screen flex items-center justify-center px-4 bg-gradient-to-br from-[#001122] via-[#003366] to-[#004488] relative">
+
+      <section 
+        id="home" 
+        className="min-h-screen flex items-center justify-center px-4 relative"
+        style={{
+          backgroundImage: 'linear-gradient(to right top, #3968cc, #007cd5, #008ed8, #009dd7, #00acd3, #2db3cf, #47b9ca, #5dbfc6, #7ac0c4, #d2d656, #f0dd62, #f0dd62'
+        }}
+      >
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FFD700]/20 to-[#FFA500]/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-32 right-16 w-48 h-48 bg-gradient-to-br from-[#40E0D0]/30 to-[#87CEEB]/30 rounded-full blur-2xl"></div>
         <div className="text-center max-w-5xl mx-auto relative z-10">
@@ -212,12 +219,12 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-8xl font-bold mb-6 bg-gradient-to-r from-[#FFD700] via-[#40E0D0] to-[#87CEEB] bg-clip-text text-transparent leading-tight drop-shadow-2xl">
-            Full Stack Developer
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#13dcd9] via-[#bcbf13] to-[#457ebe] bg-clip-text text-transparent leading-tight drop-shadow-2xl">
+            Hey! I'm Souptik
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
-            16 years old • 4+ years of experience • Crafting digital experiences with precision and passion
+            16 years old | Code | PCBs | 3D printers
           </p>
           
           <div className="flex justify-center space-x-6 mb-12">
@@ -447,7 +454,7 @@ const Portfolio = () => {
       <footer className="py-16 px-4 bg-gradient-to-t from-[#042B44] to-[#08171E] border-t border-[#3A86FF]/30">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
-            <div className="text-[#FFD60A] font-bold text-3xl mb-4">&lt;/Souptik&gt;</div>
+            <div className="text-[#FFD60A] font-bold text-3xl mb-4">&lt;Souptik /&gt;</div>
             <p className="text-gray-300 text-lg">Crafting digital experiences with passion and precision.</p>
           </div>
           
@@ -456,7 +463,7 @@ const Portfolio = () => {
               <Github className="w-6 h-6" />
             </a>
             <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
-              <Twitter className="w-6 h-6" />
+              <Instagram className="w-6 h-6" />
             </a>
             <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
               <Mail className="w-6 h-6" />
@@ -464,7 +471,7 @@ const Portfolio = () => {
           </div>
           
           <div className="text-[#87CEEB] text-sm">
-            © 2025 Souptik Samanta. Built with React, TypeScript & Tailwind CSS
+            © 2025 Souptik Samanta. I have rights, dont try to copy it or i'll be angy &lt;/3
           </div>
         </div>
       </footer>
