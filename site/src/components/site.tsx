@@ -207,7 +207,7 @@ const Portfolio = () => {
       >
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FFD700]/20 to-[#FFA500]/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-32 right-16 w-48 h-48 bg-gradient-to-br from-[#40E0D0]/30 to-[#87CEEB]/30 rounded-full blur-2xl"></div>
-        <div className="text-center max-w-5xl mx-auto relative z-10">
+        <div className="text-center max-w-5xl mx-auto relative z-10 bg-[rgba(1,1,1,0.4)] p-5 rounded-2xl">
           <div className="mb-8">
             <div className="text-[#40E0D0] text-sm mb-2 tracking-wide">~/souptik-samanta $</div>
             <div className="text-2xl md:text-4xl font-bold mb-4 min-h-[3rem] text-[#87CEEB]">
@@ -215,7 +215,7 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#13dcd9] via-[#bcbf13] to-[#457ebe] bg-clip-text text-transparent leading-tight drop-shadow-2xl">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#13dcd9] via-[#bcbf13] to-[#1ce8ec] bg-clip-text text-transparent leading-tight drop-shadow-2xl">
             Hey! I'm Souptik
           </h1>
           
