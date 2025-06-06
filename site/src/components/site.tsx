@@ -51,27 +51,35 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Ceasar AI",
+      title: "Ceasar GPT",
       desc: "A finetuned AI model which impersonates Roman dictator Julius Caesar.",
       tech: ["Python", "TensorFlow"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/souptik-samanta/Caesar-Gpt",
+      live: "https://585f309f9b91b590a7.gradio.live/",
       color: "from-[#FFD700] to-[#FFA500]"
     },
     {
-      title: "Chaos Compiled",
+      title: "Chaos Compiler",
       desc: "A Corexy cum cartesian 3d printer made from scratch.",
       tech: ["CAD", "Fusion", "Kicad", "PCB"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/souptik-samanta/ChaosCompiler",
+      live: "https://github.com/souptik-samanta/ChaosCompiler/blob/main/notes.md",
       color: "from-[#40E0D0] to-[#87CEEB]"
     },
     {
       title: "HackDucky",
       desc: "A rubber ducky made made from scratch with a custom firmware.",
       tech: ["Kicad", "PCB", "Low level programming"],
-      github: "#",
-      live: "#",
+      github: "https://github.com/souptik-samanta/Hackducky",
+      live: "https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fsouptik-samanta%2FHackducky%2Ftree%2Fmain%2Fsrc",
+      color: "from-[#FFE55C] to-[#FFA500]"
+    },
+        {
+      title: "WalkieTalkie",
+      desc: "A WalkieTalkie with a BIG range.",
+      tech: ["Kicad", "PCB", "Communication Tech"],
+      github: "https://github.com/souptik-samanta/WalkieTalkie",
+      live: "https://github.com/souptik-samanta/WalkieTalkie/blob/main/JOURNAL.md",
       color: "from-[#FFE55C] to-[#FFA500]"
     }
   ];
