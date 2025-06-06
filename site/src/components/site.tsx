@@ -51,36 +51,28 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Neural Network Playground",
-      desc: "Interactive ML visualization tool with real-time parameter adjustment and model training visualization",
-      tech: ["Python", "TensorFlow", "React", "D3.js"],
+      title: "Ceasar AI",
+      desc: "A finetuned AI model which impersonates Roman dictator Julius Caesar.",
+      tech: ["Python", "TensorFlow"],
       github: "#",
       live: "#",
       color: "from-[#FFD700] to-[#FFA500]"
     },
     {
-      title: "Discord Bot Army",
-      desc: "Multi-purpose bot ecosystem serving 50K+ users with advanced moderation and automation",
-      tech: ["Node.js", "Discord.js", "MongoDB", "Redis"],
+      title: "Chaos Compiled",
+      desc: "A Corexy cum cartesian 3d printer made from scratch.",
+      tech: ["CAD", "Fusion", "Kicad", "PCB"],
       github: "#",
       live: "#",
       color: "from-[#40E0D0] to-[#87CEEB]"
     },
     {
-      title: "Crypto Trading Dashboard",
-      desc: "Real-time cryptocurrency tracking with advanced charting and portfolio management",
-      tech: ["React", "WebSocket", "Chart.js", "Node.js"],
+      title: "HackDucky",
+      desc: "A rubber ducky made made from scratch with a custom firmware.",
+      tech: ["Kicad", "PCB", "Low level programming"],
       github: "#",
       live: "#",
       color: "from-[#FFE55C] to-[#FFA500]"
-    },
-    {
-      title: "AI Code Assistant",
-      desc: "VSCode extension with intelligent code completion and bug detection",
-      tech: ["TypeScript", "OpenAI API", "VSCode API"],
-      github: "#",
-      live: "#",
-      color: "from-[#48CAE4] to-[#FFD700]"
     }
   ];
 
