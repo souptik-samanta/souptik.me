@@ -253,18 +253,13 @@ const Portfolio = () => {
               <div className="bg-gradient-to-br from-[#001122]/80 to-[#003366]/80 p-8 rounded-2xl border border-[#40E0D0]/30 hover:border-[#FFD700]/50 transition-all duration-300 backdrop-blur-sm">
                 <h3 className="text-2xl font-semibold mb-6 text-[#40E0D0]">The Journey</h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  My coding journey began at 12 when I discovered Python while trying to automate my homework. 
-                  Four years later, I've built production applications, contributed to open source projects, 
-                  and mentored other young developers. I believe in writing code that's not just functional, but elegant.
-                </p>
+                My coding jounrey began at 11 when I came across HTML. Five years later, I've built 3d printers, contributed to open source projects, and mentored other young developers. I want to get into AI/ML and cybersecurity in future. </p>
               </div>
               
               <div className="bg-gradient-to-br from-[#001122]/80 to-[#003366]/80 p-8 rounded-2xl border border-[#40E0D0]/30 hover:border-[#FFD700]/50 transition-all duration-300 backdrop-blur-sm">
                 <h3 className="text-2xl font-semibold mb-6 text-[#FFD700]">Philosophy</h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                  I'm passionate about creating technology that makes a difference. Whether it's optimizing 
-                  algorithms for better performance or designing intuitive user interfaces, I focus on 
-                  solutions that are both technically sound and user-centered.
+                 I'm passionate about creating tech pieces which make a difference, I want to make learning available to all. I believe that "A good world is where learning is available to all, no matter what their age, gender, creed or race is." 
                 </p>
               </div>
             </div>
