@@ -182,13 +182,10 @@ const Portfolio = () => {
       </nav>
 
 
-      <section 
-        id="home" 
-        className="min-h-screen flex items-center justify-center px-4 relative"
-        style={{
-          backgroundImage: 'linear-gradient(to right top, #3968cc, #007cd5, #008ed8, #009dd7, #00acd3, #2db3cf, #47b9ca, #5dbfc6, #7ac0c4, #d2d656, #f0dd62, #f0dd62'
-        }}
-      >
+<section 
+  id="home" 
+  className="min-h-screen flex items-center justify-center px-4 relative bg-big-sur"
+>
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FFD700]/20 to-[#FFA500]/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-32 right-16 w-48 h-48 bg-gradient-to-br from-[#40E0D0]/30 to-[#87CEEB]/30 rounded-full blur-2xl"></div>
         <div className="text-center max-w-5xl mx-auto relative z-10 bg-[rgba(1,1,1,0.4)] p-5 rounded-2xl">
@@ -199,8 +196,8 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-[#13dcd9] via-[#bcbf13] to-[#1ce8ec] bg-clip-text text-transparent leading-tight drop-shadow-2xl">
-            Hey! I'm Souptik
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#8ff7ff] bg-clip-text  leading-tight drop-shadow-2xl">
+            Hey! I'm Souptik.
           </h1>
           
           <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed max-w-3xl mx-auto">
@@ -208,13 +205,13 @@ const Portfolio = () => {
           </p>
           
           <div className="flex justify-center space-x-6 mb-12">
-            <a href="#" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
+            <a href="https://github.com/souptik-samanta" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
-              <Twitter className="w-6 h-6" />
+            <a href="https://www.instagram.com/souptik.me" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
+              <Instagram className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
+            <a href="mailto:souptiksamanta20141188@gmail.com" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Mail className="w-6 h-6" />
             </a>
           </div>
@@ -390,13 +387,13 @@ const Portfolio = () => {
           </div>
           
           <div className="flex justify-center space-x-6 mb-8">
-            <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+            <a href="https://github.com/souptik-samanta" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
               <Github className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+            <a href="https://www.instagram.com/souptik.me" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
               <Instagram className="w-6 h-6" />
             </a>
-            <a href="#" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+            <a href="mailto:souptiksamanta20141188@gmail.com" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
               <Mail className="w-6 h-6" />
             </a>
           </div>
