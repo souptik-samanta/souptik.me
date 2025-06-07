@@ -22,7 +22,7 @@ const Portfolio = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'skills', 'testimonials', 'blog'];
+      const sections = ['home', 'about', 'projects', 'skills', 'testimonials'];
       const scrollPos = window.scrollY + 100;
 
       for (const section of sections) {
@@ -135,7 +135,7 @@ const Portfolio = () => {
             </div>
             
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'projects', 'skills', 'testimonials', 'blog'].map((item) => (
+              {['home', 'about', 'projects', 'skills', 'testimonials'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -167,7 +167,7 @@ const Portfolio = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-gradient-to-r from-[#001122] to-[#003366] border-t border-[#40E0D0]/30">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['home', 'about', 'projects', 'skills', 'testimonials', 'blog'].map((item) => (
+              {['home', 'about', 'projects', 'skills', 'testimonials'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
