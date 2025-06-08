@@ -1,0 +1,12 @@
+@import "tailwindcss";
+
+
+@layer utilities {
+  .bg-big-sur {
+    background-image: url('/bg.svg');
+    background-blend-mode: screen;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+}
