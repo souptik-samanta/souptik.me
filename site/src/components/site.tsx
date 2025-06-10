@@ -1,11 +1,32 @@
 import { useState, useEffect } from 'react';
-import { ChevronDown, Github, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Database, Globe, Instagram, CircuitBoard, Computer, Blocks, Aperture } from 'lucide-react';
+import { ChevronDown, Github, Mail, ExternalLink, Code, Coffee, Zap, Terminal, Cpu, Database, Globe, Instagram, CircuitBoard, Computer, Blocks, Aperture, Music, Play, Pause, Linkedin, Send, X } from 'lucide-react';
 
 const Portfolio = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [currentSection, setCurrentSection] = useState('home');
   const [typedText, setTypedText] = useState('');
   const [isTyping, setIsTyping] = useState(true);
+  const [showContactForm, setShowContactForm] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+  const [formSubmitted, setFormSubmitted] = useState(false);
+
+  // Mock Spotify data - replace with real API calls
+  const [spotifyData, setSpotifyData] = useState({
+    isPlaying: true,
+    track: {
+      name: "Bohemian Rhapsody",
+      artist: "Queen",
+      album: "A Night at the Opera",
+      duration: 355000, // 5:55 in milliseconds
+      progress: 120000, // 2:00 in milliseconds
+      image: "https://via.placeholder.com/64x64/FFD700/000000?text=♪"
+    }
+  });
 
   const fullText = "const developer = 'Souptik Samanta';";
 
@@ -20,9 +41,26 @@ const Portfolio = () => {
     }
   }, [typedText, isTyping]);
 
+  // Mock Spotify progress update
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (spotifyData.isPlaying && spotifyData.track.progress < spotifyData.track.duration) {
+        setSpotifyData(prev => ({
+          ...prev,
+          track: {
+            ...prev.track,
+            progress: Math.min(prev.track.progress + 1000, prev.track.duration)
+          }
+        }));
+      }
+    }, 1000);
+
+    return () => clearInterval(interval);
+  }, [spotifyData.isPlaying, spotifyData.track.progress]);
+
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['home', 'about', 'projects', 'skills', 'testimonials'];
+      const sections = ['home', 'about', 'projects', 'skills', 'spotify', 'testimonials'];
       const scrollPos = window.scrollY + 100;
 
       for (const section of sections) {
@@ -43,10 +81,44 @@ const Portfolio = () => {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (sectionId) => {
     setCurrentSection(sectionId);
     document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth' });
     setIsMenuOpen(false);
+  };
+
+  const formatTime = (ms) => {
+    const minutes = Math.floor(ms / 60000);
+    const seconds = Math.floor((ms % 60000) / 1000);
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
+  };
+
+  const handleContactSubmit = (e) => {
+    e.preventDefault();
+    
+    // In a real implementation, you would send this to your backend
+    const contactData = {
+      ...formData,
+      timestamp: new Date().toISOString(),
+      id: Date.now()
+    };
+    
+    // Simulate storing data (in real app, send to your backend)
+    console.log('Contact form submitted:', contactData);
+    
+    setFormSubmitted(true);
+    setTimeout(() => {
+      setShowContactForm(false);
+      setFormSubmitted(false);
+      setFormData({ name: '', email: '', subject: '', message: '' });
+    }, 2000);
+  };
+
+  const handleInputChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
 
   const projects = [
@@ -74,7 +146,7 @@ const Portfolio = () => {
       live: "https://kicanvas.org/?github=https%3A%2F%2Fgithub.com%2Fsouptik-samanta%2FHackducky%2Ftree%2Fmain%2Fsrc",
       color: "from-[#FFE55C] to-[#FFA500]"
     },
-        {
+    {
       title: "WalkieTalkie",
       desc: "A WalkieTalkie with a BIG range.",
       tech: ["Kicad", "PCB", "Communication Tech"],
@@ -109,13 +181,12 @@ const Portfolio = () => {
       text: "Delivered a complex payment integration ahead of schedule. His attention to detail and problem-solving skills are remarkable.",
       avatar: "SR"
     },
-        {
+    {
       name: "Manan Sharma",
       role: "Developer",
       text: "Souptik's PCB skills are exceptional, great innovator.",
       avatar: "MS"
     }
-    
   ];
 
   return (
@@ -127,6 +198,94 @@ const Portfolio = () => {
         <div className="absolute top-1/2 right-1/3 w-28 h-28 bg-gradient-to-br from-[#40E0D0] to-[#48CAE4] rounded-full opacity-25 blur-xl"></div>
         <div className="absolute bottom-20 right-10 w-36 h-36 bg-gradient-to-br from-[#FFEAA7] to-[#FFD93D] rounded-full opacity-20 blur-xl"></div>
       </div>
+
+      {/* Contact Form Modal */}
+      {showContactForm && (
+        <div className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+          <div className="bg-gradient-to-br from-[#001122] to-[#003366] rounded-2xl p-8 max-w-lg w-full border border-[#40E0D0]/30 relative">
+            <button
+              onClick={() => setShowContactForm(false)}
+              className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors duration-300"
+            >
+              <X className="w-6 h-6" />
+            </button>
+            
+            <h3 className="text-2xl font-bold mb-6 text-[#FFD700]">Get In Touch</h3>
+            
+            {formSubmitted ? (
+              <div className="text-center py-8">
+                <div className="w-16 h-16 bg-gradient-to-r from-[#40E0D0] to-[#FFD700] rounded-full flex items-center justify-center mx-auto mb-4">
+                  <Send className="w-8 h-8 text-black" />
+                </div>
+                <h4 className="text-xl font-semibold text-[#40E0D0] mb-2">Message Sent!</h4>
+                <p className="text-gray-300">Thanks for reaching out. I'll get back to you soon!</p>
+              </div>
+            ) : (
+              <form onSubmit={handleContactSubmit} className="space-y-6">
+                <div>
+                  <label className="block text-sm font-medium text-[#87CEEB] mb-2">Name</label>
+                  <input
+                    type="text"
+                    name="name"
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-[#003366]/50 border border-[#40E0D0]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#FFD700] focus:outline-none transition-colors duration-300"
+                    placeholder="Your name"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-[#87CEEB] mb-2">Email</label>
+                  <input
+                    type="email"
+                    name="email"
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-[#003366]/50 border border-[#40E0D0]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#FFD700] focus:outline-none transition-colors duration-300"
+                    placeholder="your.email@example.com"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-[#87CEEB] mb-2">Subject</label>
+                  <input
+                    type="text"
+                    name="subject"
+                    value={formData.subject}
+                    onChange={handleInputChange}
+                    required
+                    className="w-full px-4 py-3 bg-[#003366]/50 border border-[#40E0D0]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#FFD700] focus:outline-none transition-colors duration-300"
+                    placeholder="What's this about?"
+                  />
+                </div>
+                
+                <div>
+                  <label className="block text-sm font-medium text-[#87CEEB] mb-2">Message</label>
+                  <textarea
+                    name="message"
+                    value={formData.message}
+                    onChange={handleInputChange}
+                    required
+                    rows="4"
+                    className="w-full px-4 py-3 bg-[#003366]/50 border border-[#40E0D0]/30 rounded-lg text-white placeholder-gray-400 focus:border-[#FFD700] focus:outline-none transition-colors duration-300 resize-none"
+                    placeholder="Your message..."
+                  ></textarea>
+                </div>
+                
+                <button
+                  type="submit"
+                  className="w-full bg-gradient-to-r from-[#FFD700] to-[#40E0D0] px-6 py-3 rounded-lg font-semibold text-black hover:shadow-xl hover:shadow-[#FFD700]/40 transition-all duration-300 transform hover:scale-105"
+                >
+                  Send Message
+                </button>
+              </form>
+            )}
+          </div>
+        </div>
+      )}
+
       <nav className="fixed top-0 w-full bg-gradient-to-r from-[#001122]/95 via-[#003366]/95 to-[#004488]/95 backdrop-blur-xl border-b border-[#40E0D0]/30 z-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex justify-between items-center h-16">
@@ -135,7 +294,7 @@ const Portfolio = () => {
             </div>
             
             <div className="hidden md:flex space-x-8">
-              {['home', 'about', 'projects', 'skills', 'testimonials'].map((item) => (
+              {['home', 'about', 'projects', 'skills', 'spotify', 'testimonials'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -167,7 +326,7 @@ const Portfolio = () => {
         {isMenuOpen && (
           <div className="md:hidden bg-gradient-to-r from-[#001122] to-[#003366] border-t border-[#40E0D0]/30">
             <div className="px-2 pt-2 pb-3 space-y-1">
-              {['home', 'about', 'projects', 'skills', 'testimonials'].map((item) => (
+              {['home', 'about', 'projects', 'skills', 'spotify', 'testimonials'].map((item) => (
                 <button
                   key={item}
                   onClick={() => scrollToSection(item)}
@@ -181,11 +340,10 @@ const Portfolio = () => {
         )}
       </nav>
 
-
-<section 
-  id="home" 
-  className="min-h-screen flex items-center justify-center px-4 relative bg-big-sur"
->
+      <section 
+        id="home" 
+        className="min-h-screen flex items-center justify-center px-4 relative bg-big-sur"
+      >
         <div className="absolute top-20 left-20 w-64 h-64 bg-gradient-to-br from-[#FFD700]/20 to-[#FFA500]/20 rounded-full blur-3xl"></div>
         <div className="absolute bottom-32 right-16 w-48 h-48 bg-gradient-to-br from-[#40E0D0]/30 to-[#87CEEB]/30 rounded-full blur-2xl"></div>
         <div className="text-center max-w-5xl mx-auto relative z-10 bg-[rgba(1,1,1,0.4)] p-5 rounded-2xl">
@@ -196,7 +354,7 @@ const Portfolio = () => {
             </div>
           </div>
           
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#8ff7ff] bg-clip-text  leading-tight drop-shadow-2xl">
+          <h1 className="text-5xl md:text-7xl font-bold mb-6 text-[#8ff7ff] bg-clip-text leading-tight drop-shadow-2xl">
             Hey! I'm Souptik.
           </h1>
           
@@ -211,6 +369,9 @@ const Portfolio = () => {
             <a href="https://www.instagram.com/souptik.me" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Instagram className="w-6 h-6" />
             </a>
+            <a href="https://linkedin.com/in/souptik-samanta" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
+              <Linkedin className="w-6 h-6" />
+            </a>
             <a href="mailto:me@souptik.me" className="p-4 bg-gradient-to-br from-[#003366] to-[#004488] rounded-xl hover:from-[#40E0D0] hover:to-[#FFD700] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD700]/25 border border-[#40E0D0]/30">
               <Mail className="w-6 h-6" />
             </a>
@@ -218,9 +379,16 @@ const Portfolio = () => {
           
           <button
             onClick={() => scrollToSection('projects')}
-            className="bg-gradient-to-r from-[#FFD700] to-[#40E0D0] px-10 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-[#FFD700]/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-black"
+            className="bg-gradient-to-r from-[#FFD700] to-[#40E0D0] px-10 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-[#FFD700]/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-black mr-4"
           >
             Explore My Work
+          </button>
+          
+          <button
+            onClick={() => setShowContactForm(true)}
+            className="bg-gradient-to-r from-[#40E0D0] to-[#87CEEB] px-10 py-4 rounded-xl font-semibold hover:shadow-xl hover:shadow-[#40E0D0]/40 transition-all duration-300 transform hover:scale-105 hover:-translate-y-1 text-black"
+          >
+            Get In Touch
           </button>
           
           <div className="mt-16 animate-bounce">
@@ -242,7 +410,7 @@ const Portfolio = () => {
               <div className="bg-gradient-to-br from-[#001122]/80 to-[#003366]/80 p-8 rounded-2xl border border-[#40E0D0]/30 hover:border-[#FFD700]/50 transition-all duration-300 backdrop-blur-sm">
                 <h3 className="text-2xl font-semibold mb-6 text-[#40E0D0]">The Journey</h3>
                 <p className="text-gray-300 leading-relaxed text-lg">
-                My coding jounrey began at 11 when I came across HTML. Five years later, I've built 3d printers, contributed to open source projects, and mentored other young developers. I want to get into AI/ML and cybersecurity in future. </p>
+                My coding journey began at 11 when I came across HTML. Five years later, I've built 3d printers, contributed to open source projects, and mentored other young developers. I want to get into AI/ML and cybersecurity in future. </p>
               </div>
               
               <div className="bg-gradient-to-br from-[#001122]/80 to-[#003366]/80 p-8 rounded-2xl border border-[#40E0D0]/30 hover:border-[#FFD700]/50 transition-all duration-300 backdrop-blur-sm">
@@ -344,6 +512,93 @@ const Portfolio = () => {
         </div>
       </section>
 
+      <section id="spotify" className="py-24 px-4 bg-gradient-to-b from-[#042B44] to-[#08171E]">
+        <div className="max-w-4xl mx-auto">
+          <h2 className="text-5xl font-bold mb-16 text-center">
+            Currently <span className="text-[#1DB954]">Listening</span>
+          </h2>
+          
+          <div className="bg-gradient-to-br from-[#1DB954]/20 to-[#191414]/80 p-8 rounded-2xl border border-[#1DB954]/30 hover:border-[#1DB954]/50 transition-all duration-500 backdrop-blur-sm">
+            <div className="flex items-center space-x-6">
+              <div className="relative">
+                <img 
+                  src={spotifyData.track.image} 
+                  alt="Album Cover" 
+                  className="w-20 h-20 rounded-lg shadow-lg"
+                />
+                <div className="absolute inset-0 bg-black/20 rounded-lg flex items-center justify-center opacity-0 hover:opacity-100 transition-opacity duration-300">
+                  <Music className="w-6 h-6 text-white" />
+                </div>
+              </div>
+              
+              <div className="flex-1 min-w-0">
+                <div className="flex items-center space-x-3 mb-2">
+                  <h3 className="text-xl font-semibold text-white truncate">
+                    {spotifyData.track.name}
+                  </h3>
+                  <div className="flex items-center space-x-1">
+                    {spotifyData.isPlaying ? (
+                      <>
+                        <div className="w-1 h-4 bg-[#1DB954] animate-pulse"></div>
+                        <div className="w-1 h-6 bg-[#1DB954] animate-pulse" style={{ animationDelay: '0.2s' }}></div>
+                        <div className="w-1 h-3 bg-[#1DB954] animate-pulse" style={{ animationDelay: '0.4s' }}></div>
+                        <div className="w-1 h-5 bg-[#1DB954] animate-pulse" style={{ animationDelay: '0.6s' }}></div>
+                      </>
+                    ) : (
+                      <Pause className="w-4 h-4 text-gray-400" />
+                    )}
+                  </div>
+                </div>
+                <p className="text-[#1DB954] mb-1">{spotifyData.track.artist}</p>
+                <p className="text-gray-400 text-sm mb-4">{spotifyData.track.album}</p>
+                
+                <div className="space-y-2">
+                  <div className="flex justify-between text-sm text-gray-400">
+                    <span>{formatTime(spotifyData.track.progress)}</span>
+                    <span>{formatTime(spotifyData.track.duration)}</span>
+                  </div>
+                  <div className="w-full bg-gray-700 rounded-full h-2 overflow-hidden">
+                    <div 
+                      className="h-2 bg-gradient-to-r from-[#1DB954] to-[#1ed760] transition-all duration-1000 ease-out rounded-full"
+                      style={{ 
+                        width: `${(spotifyData.track.progress / spotifyData.track.duration) * 100}%` 
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              
+              <div className="flex items-center space-x-4">
+                <button
+                  onClick={() => setSpotifyData(prev => ({ ...prev, isPlaying: !prev.isPlaying }))}
+                  className="p-3 bg-[#1DB954] rounded-full hover:bg-[#1ed760] transition-colors duration-300 hover:scale-110"
+                >
+                  {spotifyData.isPlaying ? (
+                    <Pause className="w-6 h-6 text-black" />
+                  ) : (
+                    <Play className="w-6 h-6 text-black ml-1" />
+                  )}
+                </button>
+                <a 
+                  href="https://open.spotify.com" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="p-3 bg-[#191414] rounded-full hover:bg-[#1DB954] transition-colors duration-300 hover:scale-110"
+                >
+                  <ExternalLink className="w-6 h-6 text-white" />
+                </a>
+              </div>
+            </div>
+          </div>
+          
+          <div className="text-center mt-8">
+            <p className="text-gray-400 text-sm">
+              🎵 Music fuels my coding sessions • Follow me on Spotify for my coding playlists
+            </p>
+          </div>
+        </div>
+      </section>
+
       <section id="testimonials" className="py-24 px-4 bg-gradient-to-b from-[#042B44] to-[#08171E]">
         <div className="max-w-7xl mx-auto">
           <h2 className="text-5xl font-bold mb-16 text-center">
@@ -377,8 +632,6 @@ const Portfolio = () => {
         </div>
       </section>
 
-
-
       <footer className="py-16 px-4 bg-gradient-to-t from-[#042B44] to-[#08171E] border-t border-[#3A86FF]/30">
         <div className="max-w-7xl mx-auto text-center">
           <div className="mb-8">
@@ -392,6 +645,9 @@ const Portfolio = () => {
             </a>
             <a href="https://www.instagram.com/souptik.me" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
               <Instagram className="w-6 h-6" />
+            </a>
+            <a href="https://linkedin.com/in/souptik-samanta" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
+              <Linkedin className="w-6 h-6" />
             </a>
             <a href="mailto:souptiksamanta20141188@gmail.com" className="p-4 bg-[#042B44] rounded-xl hover:bg-[#3A86FF] transition-all duration-300 hover:scale-110 hover:shadow-lg hover:shadow-[#FFD60A]/25">
               <Mail className="w-6 h-6" />
