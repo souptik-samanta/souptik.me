@@ -399,7 +399,7 @@ const Portfolio = () => {
           </div>
           
           <div className="text-[#87CEEB] text-sm">
-            © 2025 Souptik Samanta. I have rights, dont try to copy it or i'll be angy &lt;/3
+            © 2025 Souptik Samanta. I have rights(Cons, dont try to copy it or i'll be angy &lt;/3
           </div>
         </div>
       </footer>
