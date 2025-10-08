@@ -1,0 +1,102 @@
+[
+  {
+    "projectNumber": 1,
+    "title": "Personal Portfolio",
+    "repo": "https://github.com/souptik-samanta/souptik.me",
+    "demo": "https://www.souptik.me/",
+    "img": "https://cloud-jckcb4n5b-hack-club-bot.vercel.app/0image.png",
+    "description": "My personal portfolio website built with HTML, CSS, and JavaScript. Features a responsive design, dark mode toggle, and interactive project gallery.",
+    "featured": true,
+    "tags": ["HTML", "CSS", "JavaScript", "Responsive"]
+  },
+  {
+    "projectNumber": 2,
+    "title": "Kommie-Keeb",
+    "repo": "https://github.com/souptik-samanta/Kommie-keeb",
+    "demo": "https://keyboard.souptik.me/",
+    "img": "https://cdn.hackclubber.dev/slackcdn/73683540eab29ba12fd7827f61e20151.png",
+    "description": "Kommie-keeb is an 88-key custom mechanical keyboard featuring an elegant ANSI layout, premium Cherry MX switches, and an OLED display on a custom PCB.",
+    "featured": true,
+    "tags": ["Hardware", "PCB Design", "Mechanical", "Custom"]
+  },
+  {
+    "projectNumber": 3,
+    "title": "Chaos Compiler",
+    "repo": "https://github.com/souptik-samanta/ChaosCompiler",
+    "demo": "",
+    "img": "https://github.com/user-attachments/assets/dc984c80-3bb9-4fc6-a29b-69e23738e542",
+    "description": "Chaos Compiler is a CoreXY-Cartesian hybrid 3D printer featuring a custom CoreXY design with a unique Z-axis. Built over 75+ hours with automatic multicolor printing support.",
+    "featured": true,
+    "tags": ["3D Printing", "Hardware", "CoreXY", "Engineering"]
+  },
+  {
+    "projectNumber": 4,
+    "title": "AI Chat Bot",
+    "repo": "https://github.com/souptik-samanta/ai-chatbot",
+    "demo": "https://chatbot.souptik.me/",
+    "img": "https://via.placeholder.com/400x200/6366f1/ffffff?text=AI+ChatBot",
+    "description": "An intelligent chatbot built with natural language processing capabilities, trained on custom datasets for personalized responses.",
+    "featured": false,
+    "tags": ["AI", "NLP", "Python", "Machine Learning"]
+  },
+  {
+    "projectNumber": 5,
+    "title": "Task Manager Pro",
+    "repo": "https://github.com/souptik-samanta/task-manager",
+    "demo": "https://tasks.souptik.me/",
+    "img": "https://via.placeholder.com/400x200/14b8a6/ffffff?text=Task+Manager",
+    "description": "A comprehensive task management application with real-time collaboration, priority settings, and advanced filtering options.",
+    "featured": false,
+    "tags": ["React", "Node.js", "MongoDB", "Real-time"]
+  },
+  {
+    "projectNumber": 6,
+    "title": "Weather Dashboard",
+    "repo": "https://github.com/souptik-samanta/weather-app",
+    "demo": "https://weather.souptik.me/",
+    "img": "https://via.placeholder.com/400x200/fbbf24/ffffff?text=Weather+App",
+    "description": "Real-time weather dashboard with interactive maps, forecasts, and weather alerts for multiple locations worldwide.",
+    "featured": false,
+    "tags": ["API", "JavaScript", "Charts", "Geolocation"]
+  },
+  {
+    "projectNumber": 7,
+    "title": "Blockchain Wallet",
+    "repo": "https://github.com/souptik-samanta/crypto-wallet",
+    "demo": "",
+    "img": "https://via.placeholder.com/400x200/8b5cf6/ffffff?text=Crypto+Wallet",
+    "description": "A secure cryptocurrency wallet with multi-currency support, transaction history, and portfolio tracking features.",
+    "featured": false,
+    "tags": ["Blockchain", "Cryptocurrency", "Security", "Web3"]
+  },
+  {
+    "projectNumber": 8,
+    "title": "Code Editor",
+    "repo": "https://github.com/souptik-samanta/code-editor",
+    "demo": "https://editor.souptik.me/",
+    "img": "https://via.placeholder.com/400x200/ef4444/ffffff?text=Code+Editor",
+    "description": "A web-based code editor with syntax highlighting, auto-completion, and live preview for multiple programming languages.",
+    "featured": false,
+    "tags": ["Monaco Editor", "Syntax Highlighting", "Live Preview", "Multi-language"]
+  },
+  {
+    "projectNumber": 9,
+    "title": "IoT Dashboard",
+    "repo": "https://github.com/souptik-samanta/iot-dashboard",
+    "demo": "https://iot.souptik.me/",
+    "img": "https://via.placeholder.com/400x200/10b981/ffffff?text=IoT+Dashboard",
+    "description": "Real-time IoT device monitoring dashboard with sensor data visualization, alerts, and remote control capabilities.",
+    "featured": false,
+    "tags": ["IoT", "Real-time", "Data Visualization", "Arduino"]
+  },
+  {
+    "projectNumber": 10,
+    "title": "E-commerce Platform",
+    "repo": "https://github.com/souptik-samanta/ecommerce",
+    "demo": "https://store.souptik.me/",
+    "img": "https://via.placeholder.com/400x200/f59e0b/ffffff?text=E-commerce",
+    "description": "Full-stack e-commerce platform with payment integration, inventory management, and admin dashboard.",
+    "featured": false,
+    "tags": ["React", "Node.js", "Payment Gateway", "Full-stack"]
+  }
+]

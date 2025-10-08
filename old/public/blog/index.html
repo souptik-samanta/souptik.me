@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Souptik Samanta</title>
+    <meta name="description" content="Technical blog posts about development, hardware projects, and maker journey.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <a href="../index.html">Souptik</a>
+            </div>
+            <div class="nav-menu">
+                <a href="../index.html" class="nav-link">Home</a>
+                <a href="../index.html#about" class="nav-link">About</a>
+                <a href="../index.html#projects" class="nav-link">Projects</a>
+                <a href="#blog" class="nav-link active">Blog</a>
+                <a href="../index.html#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="hero-background">
+            <div class="particles"></div>
+        </div>
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1 class="blog-title">Technical Blog</h1>
+                <p class="blog-subtitle">Sharing my journey in development, hardware projects, and maker adventures</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Post -->
+    <section class="featured-post section">
+        <div class="container">
+            <div class="featured-content">
+                <div class="featured-image">
+                    <img src="https://github.com/user-attachments/assets/dc984c80-3bb9-4fc6-a29b-69e23738e542" alt="Chaos Compiler 3D Printer" class="featured-img">
+                </div>
+                <div class="featured-text">
+                    <span class="featured-badge">Featured Post</span>
+                    <h2 class="featured-title">Building Chaos Compiler: My DIY 3D Printer Journey</h2>
+                    <p class="featured-description">
+                        Discover how I built a CoreXY-Cartesian hybrid 3D printer from scratch, featuring a custom CoreXY design 
+                        with automatic multicolor printing, auto print removal, and advanced bed leveling.
+                    </p>
+                    <div class="featured-meta">
+                        <span class="meta-item">
+                            <i data-lucide="calendar"></i>
+                            October 2024
+                        </span>
+                        <span class="meta-item">
+                            <i data-lucide="clock"></i>
+                            15 min read
+                        </span>
+                        <span class="meta-item">
+                            <i data-lucide="tag"></i>
+                            3D Printing, Hardware
+                        </span>
+                    </div>
+                    <div class="featured-buttons">
+                        <a href="#chaos-compiler" class="btn btn-primary">Read Full Story</a>
+                        <a href="https://github.com/souptik-samanta/ChaosCompiler" target="_blank" class="btn btn-secondary">
+                            <i data-lucide="github"></i>
+                            View Project
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Posts Grid -->
+    <section class="blog-posts section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Latest Posts</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="posts-grid">
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x200/6366f1/ffffff?text=AI+Development" alt="AI Development">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-tags">
+                            <span class="tag">AI</span>
+                            <span class="tag">Machine Learning</span>
+                        </div>
+                        <h3 class="post-title">Building My First Large Language Model</h3>
+                        <p class="post-excerpt">Exploring the fascinating world of transformer architectures and training my own language model from scratch using PyTorch.</p>
+                        <div class="post-meta">
+                            <span class="meta-date">Sep 2024</span>
+                            <span class="meta-read">8 min read</span>
+                        </div>
+                        <a href="#llm-post" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x200/14b8a6/ffffff?text=Web+Development" alt="Web Development">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">Performance</span>
+                        </div>
+                        <h3 class="post-title">Optimizing React Applications for Performance</h3>
+                        <p class="post-excerpt">Learn advanced techniques for optimizing React apps, including code splitting, memoization, and virtual scrolling.</p>
+                        <div class="post-meta">
+                            <span class="meta-date">Aug 2024</span>
+                            <span class="meta-read">12 min read</span>
+                        </div>
+                        <a href="#react-optimization" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://cdn.hackclubber.dev/slackcdn/73683540eab29ba12fd7827f61e20151.png" alt="Keyboard Design">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-tags">
+                            <span class="tag">Hardware</span>
+                            <span class="tag">PCB Design</span>
+                        </div>
+                        <h3 class="post-title">Designing Kommie-Keeb: Custom Mechanical Keyboard</h3>
+                        <p class="post-excerpt">The complete journey of designing and building a custom 88-key mechanical keyboard with OLED display and premium switches.</p>
+                        <div class="post-meta">
+                            <span class="meta-date">Jul 2024</span>
+                            <span class="meta-read">10 min read</span>
+                        </div>
+                        <a href="#keyboard-design" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+
+                <article class="post-card">
+                    <div class="post-image">
+                        <img src="https://via.placeholder.com/400x200/fbbf24/ffffff?text=IoT+Project" alt="IoT Project">
+                    </div>
+                    <div class="post-content">
+                        <div class="post-tags">
+                            <span class="tag">IoT</span>
+                            <span class="tag">Arduino</span>
+                        </div>
+                        <h3 class="post-title">Smart Home Automation with Arduino</h3>
+                        <p class="post-excerpt">Building an intelligent home automation system using Arduino, sensors, and cloud integration for remote monitoring.</p>
+                        <div class="post-meta">
+                            <span class="meta-date">Jun 2024</span>
+                            <span class="meta-read">15 min read</span>
+                        </div>
+                        <a href="#smart-home" class="read-more">Read More <i data-lucide="arrow-right"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Detailed Post: Chaos Compiler -->
+    <section id="chaos-compiler" class="detailed-post section">
+        <div class="container">
+            <article class="post-detail">
+                <header class="post-header">
+                    <h1 class="post-detail-title">Building Chaos Compiler: My DIY 3D Printer Journey</h1>
+                    <div class="post-detail-meta">
+                        <div class="author-info">
+                            <img src="https://cdn.hackclubber.dev/slackcdn/8135397394c51a9e90c4ea463f242deb.png" alt="Souptik Samanta" class="author-avatar">
+                            <div>
+                                <span class="author-name">Souptik Samanta</span>
+                                <span class="post-date">October 8, 2024</span>
+                            </div>
+                        </div>
+                        <div class="post-stats">
+                            <span class="stat">15 min read</span>
+                            <span class="stat">3D Printing</span>
+                        </div>
+                    </div>
+                </header>
+
+                <div class="post-content-detail">
+                    <div class="content-block">
+                        <h2>The Vision</h2>
+                        <p>When I first envisioned building my own 3D printer, I knew it had to be something special. Not just another RepRap clone, but a machine that would push boundaries and challenge conventional designs. Thus, Chaos Compiler was born - a CoreXY-Cartesian hybrid that would redefine what's possible in desktop 3D printing.</p>
+                        
+                        <div class="embed-container">
+                            <iframe src="https://gmail4499184.autodesk360.com/shares/public/SH286ddQT78850c0d8a468c7426ee43f79b8?mode=embed" 
+                                    width="100%" height="500" allowfullscreen="true" 
+                                    webkitallowfullscreen="true" mozallowfullscreen="true"  
+                                    frameborder="0"></iframe>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Design Philosophy</h2>
+                        <p>The Chaos Compiler isn't just about printing; it's about precision, speed, and innovation. The CoreXY motion system provides incredible speed and accuracy, while the unique Cartesian-inspired Z-axis ensures perfect layer adhesion.</p>
+                        
+                        <div class="feature-grid">
+                            <div class="feature-item">
+                                <h4>🏗️ Build Volume</h4>
+                                <p>310x310x380mm - Large enough for ambitious projects</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>⚡ Speed</h4>
+                                <p>High-speed printing with CoreXY precision</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>🎨 Multi-color</h4>
+                                <p>Automatic multicolor printing capabilities</p>
+                            </div>
+                            <div class="feature-item">
+                                <h4>🤖 Automation</h4>
+                                <p>Auto bed leveling and print removal</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>The Build Process</h2>
+                        <p>Over 75+ hours of design, prototyping, and assembly went into creating this machine. Every component was carefully selected or custom-designed to ensure optimal performance.</p>
+                        
+                        <blockquote>
+                            "Building Chaos Compiler taught me that the best projects come from combining ambitious vision with meticulous execution. Every challenge was an opportunity to innovate."
+                        </blockquote>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Technical Specifications</h2>
+                        <ul class="spec-list">
+                            <li><strong>Frame:</strong> Custom aluminum extrusion with 3D printed connectors</li>
+                            <li><strong>Motion System:</strong> CoreXY with linear rails</li>
+                            <li><strong>Controller:</strong> Raspberry Pi 4 with Klipper firmware</li>
+                            <li><strong>Hot-end:</strong> All-metal with precision temperature control</li>
+                            <li><strong>Bed:</strong> Magnetic flexible surface with auto-leveling</li>
+                        </ul>
+                    </div>
+
+                    <div class="content-block">
+                        <h2>Lessons Learned</h2>
+                        <p>This project pushed me to understand mechanical engineering, electronics, and software integration at a deeper level. The journey was filled with challenges, but each obstacle taught valuable lessons about persistence and problem-solving.</p>
+                    </div>
+                </div>
+
+                <footer class="post-footer">
+                    <div class="post-actions">
+                        <a href="https://github.com/souptik-samanta/ChaosCompiler" target="_blank" class="btn btn-primary">
+                            <i data-lucide="github"></i>
+                            View on GitHub
+                        </a>
+                        <button onclick="sharePost()" class="btn btn-secondary">
+                            <i data-lucide="share-2"></i>
+                            Share Post
+                        </button>
+                    </div>
+                </footer>
+            </article>
+        </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter section">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2>Stay Updated</h2>
+                <p>Get notified when I publish new posts about development, hardware projects, and maker adventures.</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit" class="btn btn-primary">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Souptik Samanta. Made with ❤️ in Kolkata, India.</p>
+                <div class="footer-links">
+                    <a href="../index.html">Home</a>
+                    <a href="../index.html#about">About</a>
+                    <a href="../index.html#projects">Projects</a>
+                    <a href="#blog">Blog</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

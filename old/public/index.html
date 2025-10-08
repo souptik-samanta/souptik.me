@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Souptik Samanta - Developer & Maker</title>
+    <meta name="description" content="Souptik Samanta - Passionate developer, hobbyist, and maker from Kolkata, India.">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <span>Souptik</span>
+            </div>
+            <div class="nav-menu">
+                <a href="#home" class="nav-link">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#projects" class="nav-link">Projects</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background">
+            <div class="particles"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-image">
+                <img src="https://cdn.hackclubber.dev/slackcdn/8135397394c51a9e90c4ea463f242deb.png" alt="Souptik Samanta" class="profile-img">
+            </div>
+            <h1 class="hero-title">
+                <span class="greeting"></span>
+                <br>I'm <span class="name-highlight">Souptik Samanta</span>
+            </h1>
+            <p class="hero-subtitle">Developer • Maker • Hobbyist</p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn btn-primary">View My Work</a>
+                <a href="#contact" class="btn btn-secondary">Get In Touch</a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="scroll-arrow"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        I'm a passionate developer and maker who loves exploring new technologies and building innovative solutions.
+                    </p>
+                    <p>
+                        As a self-taught programmer, I'm always eager to learn and experiment with cutting-edge technologies. 
+                        Currently studying in Class 10th (ICSE) at Agrasain Boys School in Kolkata, India.
+                    </p>
+                    <p>
+                        I enjoy working on diverse projects ranging from web development to hardware prototyping, 
+                        always striving to create something meaningful and impactful.
+                    </p>
+                    <div class="stats">
+                        <div class="stat">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Years Coding</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">15+</div>
+                            <div class="stat-label">Projects Built</div>
+                        </div>
+                        <div class="stat">
+                            <div class="stat-number">5+</div>
+                            <div class="stat-label">Technologies</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="https://cdn.hackclubber.dev/slackcdn/baec48be97ced99c00f0bacae4a564be.jpg" alt="Workspace" class="workspace-img">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-stats">
+                <div class="stat">
+                    <span class="stat-number" id="total-projects">50+</span>
+                    <span class="stat-label">Total Projects</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="featured-projects">3</span>
+                    <span class="stat-label">Featured</span>
+                </div>
+                <div class="stat">
+                    <span class="stat-number" id="tech-stack">15+</span>
+                    <span class="stat-label">Technologies</span>
+                </div>
+            </div>
+            <div id="projects-container" class="projects-grid">
+                <!-- Projects will be loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Skills & Technologies</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Python</span>
+                        <span class="skill-tag">JavaScript</span>
+                        <span class="skill-tag">C++</span>
+                        <span class="skill-tag">HTML/CSS</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Frameworks & Libraries</h3>
+                    <div class="skills">
+                        <span class="skill-tag">React</span>
+                        <span class="skill-tag">Node.js</span>
+                        <span class="skill-tag">Express</span>
+                        <span class="skill-tag">Flask</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Tools & Platforms</h3>
+                    <div class="skills">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Jupyter</span>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3>Hardware & Design</h3>
+                    <div class="skills">
+                        <span class="skill-tag">3D Printing</span>
+                        <span class="skill-tag">PCB Design</span>
+                        <span class="skill-tag">Soldering</span>
+                        <span class="skill-tag">CAD</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Let's Connect!</h3>
+                    <p>I'm always open to discussing new opportunities, collaborating on interesting projects, or just having a chat about technology.</p>
+                    <div class="contact-links">
+                        <a href="https://github.com/souptik-samanta" class="contact-link" target="_blank">
+                            <i data-lucide="github"></i>
+                            <span>GitHub</span>
+                        </a>
+                        <a href="mailto:hello@souptik.me" class="contact-link">
+                            <i data-lucide="mail"></i>
+                            <span>Email</span>
+                        </a>
+                        <a href="https://twitter.com/souptik_samanta" class="contact-link" target="_blank">
+                            <i data-lucide="twitter"></i>
+                            <span>Twitter</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <div class="form-header">
+                        <h4>Send me a message</h4>
+                        <p>I typically respond within 24 hours</p>
+                    </div>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">Full Name</label>
+                                <input type="text" id="name" name="name" placeholder="John Doe" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input type="email" id="email" name="email" placeholder="john@example.com" required>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <select id="subject" name="subject" required>
+                                <option value="">Select a topic</option>
+                                <option value="collaboration">Collaboration Opportunity</option>
+                                <option value="question">Technical Question</option>
+                                <option value="project">Project Inquiry</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" placeholder="Tell me about your project or question..." rows="5" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-loading" style="display: none;">Sending...</span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <p>&copy; 2024 Souptik Samanta. Made with ❤️ in Kolkata, India.</p>
+                <div class="footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#about">About</a>
+                    <a href="#projects">Projects</a>
+                    <a href="#contact">Contact</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
