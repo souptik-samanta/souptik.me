@@ -51,10 +51,10 @@ const Portfolio = () => {
 
   const projects = [
     {
-      title: "Ceasar GPT",
-      desc: "A finetuned AI model which impersonates Roman dictator Julius Caesar.",
-      tech: ["Python", "TensorFlow"],
-      github: "https://github.com/souptik-samanta/Caesar-Gpt",
+      title: "Personal site",
+      desc: "My site",
+      tech: ["TS", "JS"],
+      github: "https://github.com/souptik-samanta/souptik.me",
       live: "https://585f309f9b91b590a7.gradio.live/",
       color: "from-[#FFD700] to-[#FFA500]"
     },
@@ -75,10 +75,10 @@ const Portfolio = () => {
       color: "from-[#FFE55C] to-[#FFA500]"
     },
         {
-      title: "WalkieTalkie",
-      desc: "A WalkieTalkie with a BIG range.",
-      tech: ["Kicad", "PCB", "Communication Tech"],
-      github: "https://github.com/souptik-samanta/WalkieTalkie",
+      title: "",
+      desc: "A thermometer with a BIG range.",
+      tech: ["Kicad", "PCB", "Tech"],
+      github: "https://github.com/souptik-samanta/Infrared-gun",
       live: "https://github.com/souptik-samanta/WalkieTalkie/blob/main/JOURNAL.md",
       color: "from-[#FFE55C] to-[#FFA500]"
     }
