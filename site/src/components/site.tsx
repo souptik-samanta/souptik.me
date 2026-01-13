@@ -75,7 +75,7 @@ const Portfolio = () => {
       color: "from-[#FFE55C] to-[#FFA500]"
     },
         {
-      title: "",
+      title: "Temperature",
       desc: "A thermometer with a BIG range.",
       tech: ["Kicad", "PCB", "Tech"],
       github: "https://github.com/souptik-samanta/Infrared-gun",
