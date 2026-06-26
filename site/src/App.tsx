@@ -1,9 +1,11 @@
+import { Analytics } from '@vercel/analytics/react'
 import Portfolio from './components/site'
-function App() {
 
+function App() {
   return (
     <>
-    <Portfolio />
+      <Portfolio />
+      <Analytics />
     </>
   )
 }
