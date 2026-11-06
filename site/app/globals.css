@@ -1,0 +1,4 @@
+@import "tailwindcss";
+
+html { scroll-behavior: smooth; }
+@theme inline { --font-mono: var(--font-geist-mono); }
