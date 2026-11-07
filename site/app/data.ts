@@ -6,6 +6,7 @@ export interface Project {
   category: Category;
   tech: string[];
   repo: string;
+  img?: { src: string; w: number; h: number; alt: string; caption: string };
   link?: { label: string; href: string };
   stars?: number;
   year: string;
@@ -20,6 +21,7 @@ export const featured: Project[] = [
     category: 'PCB',
     tech: ['RP2040', 'KiCad', 'Firmware', 'Python'],
     repo: gh('Hackducky'),
+    img: { src: '/img/hackducky.jpg', w: 1400, h: 791, alt: 'The assembled HackDucky board on a wooden desk, USB-A plug on the left and USB-C on the right', caption: 'The assembled board, rev 1' },
     link: { label: 'hackducky.com', href: 'https://www.hackducky.com' },
     stars: 13,
     year: '2025',
@@ -40,6 +42,7 @@ export const featured: Project[] = [
     category: 'PCB',
     tech: ['STM32L0', 'LoRa', 'KiCad', 'C'],
     repo: gh('Sensor-Node'),
+    img: { src: '/img/sensor-node.jpg', w: 1400, h: 792, alt: 'Sensor Node board with an 18650 cell and a LoRa module, photographed outdoors', caption: 'Out in the sun with an 18650 and the LoRa module fitted' },
     year: '2026',
   },
   {
@@ -48,6 +51,7 @@ export const featured: Project[] = [
     category: 'PCB',
     tech: ['STM32F103', 'USB-C', 'KiCad', 'CAD'],
     repo: gh('Infrared-gun'),
+    img: { src: '/img/infrared-gun.jpg', w: 641, h: 599, alt: '3D render of the STM32F103 board with USB-C and GPIO headers', caption: 'KiCad 3D render of the main board' },
     stars: 6,
     year: '2025',
   },
@@ -69,6 +73,7 @@ export const projects: Project[] = [
     category: 'PCB',
     tech: ['KiCad', 'CAD', 'C++'],
     repo: gh('dryer'),
+    img: { src: '/img/dryer.jpg', w: 1400, h: 828, alt: 'KiCad 3D render of the filament dryer controller board', caption: 'Controller board render' },
     year: '2026',
   },
   {
@@ -77,6 +82,7 @@ export const projects: Project[] = [
     category: 'PCB',
     tech: ['ESP', 'Relays', 'C++'],
     repo: gh('LazyController'),
+    img: { src: '/img/lazycontroller.jpg', w: 1400, h: 709, alt: '3D render of the LazyController relay board with a mains power module and four relays', caption: 'Board render with enclosure' },
     year: '2026',
   },
   {
@@ -101,6 +107,7 @@ export const projects: Project[] = [
     category: 'PCB',
     tech: ['ESP32-C3', 'KiCad'],
     repo: gh('esp32c3'),
+    img: { src: '/img/esp32c3.jpg', w: 1095, h: 557, alt: 'Top-down render of the ESP32-C3 board with USB-C and a PCB trace antenna', caption: 'Top view, trace antenna on the right' },
     year: '2026',
   },
   {

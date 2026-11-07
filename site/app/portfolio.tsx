@@ -1,6 +1,7 @@
 'use client';
 
 import { useState } from 'react';
+import Image from 'next/image';
 import { categories, featured, projects, skillGroups, testimonials, type Project } from './data';
 
 const mono = 'font-mono text-[13px] tracking-tight';
@@ -81,6 +82,19 @@ const Portfolio = ({ liveStars, repoCount }: { liveStars: Record<string, number>
                 <div className="mt-4">
                   <Links p={p} />
                 </div>
+                {p.img && (
+                  <figure className="mt-6 max-w-xl">
+                    <Image
+                      src={p.img.src}
+                      alt={p.img.alt}
+                      width={p.img.w}
+                      height={p.img.h}
+                      sizes="(min-width: 768px) 576px, 100vw"
+                      className="w-full border-2 border-ink bg-white"
+                    />
+                    <figcaption className={`${mono} mt-2 text-mute`}>Fig. {i + 1} &mdash; {p.img.caption}</figcaption>
+                  </figure>
+                )}
               </div>
             </li>
           ))}
@@ -103,7 +117,22 @@ const Portfolio = ({ liveStars, repoCount }: { liveStars: Record<string, number>
 
         <ul className="border-t border-ink/25">
           {shown.map((p) => (
-            <li key={p.title} className="grid gap-x-6 gap-y-1 border-b border-ink/25 py-4 sm:grid-cols-[1fr_auto]">
+            <li
+              key={p.title}
+              className={`grid gap-x-6 gap-y-2 border-b border-ink/25 py-4 ${
+                p.img ? 'sm:grid-cols-[9rem_1fr_auto]' : 'sm:grid-cols-[1fr_auto]'
+              }`}
+            >
+              {p.img && (
+                <Image
+                  src={p.img.src}
+                  alt={p.img.alt}
+                  width={p.img.w}
+                  height={p.img.h}
+                  sizes="144px"
+                  className="h-24 w-full border border-ink object-cover sm:w-36"
+                />
+              )}
               <div>
                 <div className="flex flex-wrap items-baseline gap-x-3">
                   <span className="text-xl font-medium">{p.title}</span>
