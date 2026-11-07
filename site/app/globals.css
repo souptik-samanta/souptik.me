@@ -1,4 +1,39 @@
 @import "tailwindcss";
 
-html { scroll-behavior: smooth; }
-@theme inline { --font-mono: var(--font-geist-mono); }
+@theme inline {
+  --color-paper: #ece6d6;
+  --color-paper-dark: #ddd5c0;
+  --color-ink: #1a1915;
+  --color-mute: #6b665a;
+  --color-mask: #0e5a3c;
+  --color-rust: #b8420f;
+  --font-serif: var(--font-newsreader), Georgia, serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--color-paper);
+  color: var(--color-ink);
+  font-family: var(--font-serif);
+  font-size: 18px;
+  line-height: 1.55;
+}
+
+::selection {
+  background: var(--color-mask);
+  color: var(--color-paper);
+}
+
+a.u {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+}
+a.u:hover {
+  color: var(--color-mask);
+  text-decoration-thickness: 2px;
+}

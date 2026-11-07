@@ -1,9 +1,9 @@
 import type { Metadata, Viewport } from 'next';
-import { Geist, Geist_Mono } from 'next/font/google';
+import { Newsreader, JetBrains_Mono } from 'next/font/google';
 import './globals.css';
 
-const sans = Geist({ subsets: ['latin'], variable: '--font-geist-sans' });
-const mono = Geist_Mono({ subsets: ['latin'], variable: '--font-geist-mono' });
+const serif = Newsreader({ subsets: ['latin'], variable: '--font-newsreader', style: ['normal', 'italic'] });
+const mono = JetBrains_Mono({ subsets: ['latin'], variable: '--font-jetbrains' });
 
 const desc =
   'Souptik Samanta, 17, maker and developer from Kolkata, India. Custom PCBs, a from-scratch 3D printer, STM32/ESP32 firmware and AI projects.';
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   twitter: { card: 'summary_large_image', title: 'Souptik Samanta | Maker & Developer', description: desc },
 };
 
-export const viewport: Viewport = { themeColor: '#09090b' };
+export const viewport: Viewport = { themeColor: '#ece6d6' };
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -46,7 +46,7 @@ const jsonLd = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
+    <html lang="en" className={`${serif.variable} ${mono.variable}`}>
       <body>
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }} />
         {children}
