@@ -195,7 +195,39 @@ export const projects: Project[] = [
   },
 ];
 
-export const categories: ('All' | Category)[] = ['All', 'PCB', '3D / Mechanical', 'Firmware', 'Software', 'AI'];
+export interface Event {
+  title: string;
+  kind: string;
+  where: string;
+  date: string;
+  role: string;
+  desc: string[];
+  with: string;
+  img: { src: string; w: number; h: number; alt: string; caption: string }[];
+  link?: { label: string; href: string };
+}
+
+export const events: Event[] = [
+  {
+    title: 'Haven Kolkata',
+    kind: 'Hack Club game jam',
+    where: 'Kolkata, India',
+    date: '15 Nov 2026',
+    role: 'Co-organiser, operations & partnerships',
+    desc: [
+      'Haven is Hack Club’s series of in-person game jams for 13–18 year olds, run in cities around the world. I co-organised the first Haven Kolkata: one day, one room full of laptops, and a simple brief — build a game and ship it before the day ends. 46 people showed up.',
+      'We opened with a short talk on what Hack Club is, broke for lunch at AD 91 - The Art Cafe, then everyone put their heads down and built. I handled operations and partnerships, which meant the venue, the food and keeping things running while people shipped. The timings slipped a bit around the jam and demos, and we’re fixing that for next time.',
+    ],
+    with: 'Ritam and Tushar',
+    img: [
+      { src: '/img/haven-post.jpg', w: 1080, h: 1350, alt: 'Haven Kolkata poster: Souptik on the right, below a strip of three photos showing people building games, a group selfie and lunch', caption: 'Haven Kolkata, 15 Nov 2026' },
+      { src: '/img/haven-souptik.jpg', w: 1195, h: 1200, alt: 'Souptik smiling slightly into the camera, wearing glasses and a blue patterned polo, in front of an orange and blue wall', caption: 'Between sessions at the venue' },
+    ],
+    link: { label: 'haven.hackclub.com/kolkata', href: 'https://haven.hackclub.com/kolkata' },
+  },
+];
+
+export const categories:('All' | Category)[] = ['All', 'PCB', '3D / Mechanical', 'Firmware', 'Software', 'AI'];
 
 export const skillGroups = [
   { name: 'Hardware', items: ['KiCad', 'PCB design', 'STM32', 'ESP32', 'RP2040', 'LoRa', 'Soldering'] },

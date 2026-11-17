@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import Image from 'next/image';
-import { categories, featured, projects, skillGroups, testimonials, type Project } from './data';
+import { categories, events, featured, projects, skillGroups, testimonials, type Project } from './data';
 
 const mono = 'font-mono text-[13px] tracking-tight';
 
@@ -42,6 +42,7 @@ const Portfolio = ({ liveStars, repoCount }: { liveStars: Record<string, number>
         <a href="#top" className="font-bold">souptik.me</a>
         <nav className="flex gap-5">
           <a className="u" href="#made">things i made</a>
+          <a className="u" href="#events">events</a>
           <a className="u" href="#about">about</a>
           <a className="u" href="#contact">contact</a>
         </nav>
@@ -151,6 +152,51 @@ const Portfolio = ({ liveStars, repoCount }: { liveStars: Record<string, number>
           Plus {repoCount ? `${repoCount}+` : 'a lot of'} repos of half-finished experiments on{' '}
           <a className="u" href="https://github.com/souptik-samanta?tab=repositories">github</a>.
         </p>
+      </section>
+
+      <section id="events">
+        <Rule label="Events I've hosted" />
+        <ol>
+          {events.map((e, i) => (
+            <li key={e.title} className="grid gap-x-8 gap-y-2 border-b border-ink/25 py-8 sm:grid-cols-[4.5rem_1fr]">
+              <span className={`${mono} pt-2 text-rust`}>E{i + 1}</span>
+              <div>
+                <h3 className="text-4xl font-medium leading-none tracking-tight">{e.title}</h3>
+                <p className={`${mono} mt-3 text-mute`}>
+                  {e.kind} &middot; {e.where} &middot; {e.date}
+                </p>
+                <p className={`${mono} mt-1 text-mute`}>
+                  {e.role}, with {e.with}
+                </p>
+                <div className="mt-4 max-w-2xl space-y-4">
+                  {e.desc.map((p) => (
+                    <p key={p}>{p}</p>
+                  ))}
+                </div>
+                {e.link && (
+                  <p className={`${mono} mt-4`}>
+                    <a className="u" href={e.link.href} target="_blank" rel="noreferrer">{e.link.label.toLowerCase()}</a>
+                  </p>
+                )}
+                <div className="mt-6 grid max-w-2xl gap-6 sm:grid-cols-2">
+                  {e.img.map((im, j) => (
+                    <figure key={im.src}>
+                      <Image
+                        src={im.src}
+                        alt={im.alt}
+                        width={im.w}
+                        height={im.h}
+                        sizes="(min-width: 768px) 320px, 100vw"
+                        className="w-full border-2 border-ink bg-white"
+                      />
+                      <figcaption className={`${mono} mt-2 text-mute`}>Fig. {j + 1} &mdash; {im.caption}</figcaption>
+                    </figure>
+                  ))}
+                </div>
+              </div>
+            </li>
+          ))}
+        </ol>
       </section>
 
       <section id="about">
