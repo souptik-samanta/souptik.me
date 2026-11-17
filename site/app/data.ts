@@ -225,6 +225,20 @@ export const events: Event[] = [
     ],
     link: { label: 'haven.hackclub.com/kolkata', href: 'https://haven.hackclub.com/kolkata' },
   },
+  {
+    title: 'Build Guild Kolkata',
+    kind: 'Hack Club Blueprint hardware meetup',
+    where: 'My Cube, Kolkata, India',
+    date: '18 Apr 2026',
+    role: 'Organiser',
+    desc: [
+      'A free one-day hardware meetup for 13–18 year olds, part of Hack Club Blueprint’s global Build Guilds week. Attendees learned electronics basics, took a project from breadboard to PCB, and showed it off to the room at the end.',
+      'The day ran from a kick-off and a speed-run through electronics basics, through two build phases with a lunch break, to debugging, a project showcase and photos. It was funded by Hack Club, with GenXYZ, EasyEDA, JLCPCB and OSHWLab as partners.',
+    ],
+    with: 'Tap and Sadrita Neogi',
+    img: [],
+    link: { label: 'kolkata.souptik.me', href: 'https://kolkata.souptik.me/' },
+  },
 ];
 
 export const categories:('All' | Category)[] = ['All', 'PCB', '3D / Mechanical', 'Firmware', 'Software', 'AI'];
