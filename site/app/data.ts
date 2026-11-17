@@ -235,7 +235,7 @@ export const events: Event[] = [
       'A free one-day hardware meetup for 13–18 year olds, part of Hack Club Blueprint’s global Build Guilds week. Attendees learned electronics basics, took a project from breadboard to PCB, and showed it off to the room at the end.',
       'The day ran from a kick-off and a speed-run through electronics basics, through two build phases with a lunch break, to debugging, a project showcase and photos. It was funded by Hack Club, with GenXYZ, EasyEDA, JLCPCB and OSHWLab as partners.',
     ],
-    with: 'Tap and Sadrita Neogi',
+    with: 'Tap',
     img: [],
     link: { label: 'kolkata.souptik.me', href: 'https://kolkata.souptik.me/' },
   },
