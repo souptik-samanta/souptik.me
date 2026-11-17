@@ -178,7 +178,7 @@ const Portfolio = ({ liveStars, repoCount }: { liveStars: Record<string, number>
                     <a className="u" href={e.link.href} target="_blank" rel="noreferrer">{e.link.label.toLowerCase()}</a>
                   </p>
                 )}
-                {e.img.length > 0 && <div className="mt-6 grid max-w-2xl gap-6 sm:grid-cols-2">
+                {e.img.length > 0 && <div className="mt-6 grid max-w-2xl items-start gap-6 sm:grid-cols-2">
                   {e.img.map((im, j) => (
                     <figure key={im.src}>
                       <Image

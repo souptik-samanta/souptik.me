@@ -221,6 +221,12 @@ export const events: Event[] = [
     with: 'Ritam and Tushar',
     img: [
       { src: '/img/haven-post.jpg', w: 1080, h: 1350, alt: 'Haven Kolkata poster: Souptik on the right, below a strip of three photos showing people building games, a group selfie and lunch', caption: 'Haven Kolkata, 15 Nov 2026' },
+      { src: '/img/haven-souptik2.jpg', w: 1400, h: 789, alt: 'Souptik in glasses and a blue patterned shirt giving a thumbs up, with two other people, in front of the Haven Kolkata screen', caption: 'With two of the participants' },
+      { src: '/img/haven-talk.jpg', w: 1400, h: 789, alt: 'The organisers presenting a slide about safety at the front of the room while participants watch', caption: 'The kick-off talk' },
+      { src: '/img/haven-room.jpg', w: 1400, h: 788, alt: 'A packed room of participants working on laptops under stage lighting', caption: 'Hacking underway' },
+      { src: '/img/haven-screen.jpg', w: 1400, h: 788, alt: 'A wall screen reading Hacking in Progress', caption: 'Hacking in progress' },
+      { src: '/img/haven-group.jpg', w: 1400, h: 788, alt: 'A group selfie of smiling participants and organisers making peace signs', caption: 'End-of-day group selfie' },
+      { src: '/img/haven-venue.jpg', w: 1400, h: 788, alt: 'The AD 91 building lit up with fairy lights at night', caption: 'AD 91 - The Art Cafe, our venue' },
       { src: '/img/haven-souptik.jpg', w: 1195, h: 1200, alt: 'Souptik smiling slightly into the camera, wearing glasses and a blue patterned polo, in front of an orange and blue wall', caption: 'Between sessions at the venue' },
     ],
     link: { label: 'haven.hackclub.com/kolkata', href: 'https://haven.hackclub.com/kolkata' },
